@@ -1,0 +1,94 @@
+{
+  "agent_name": "Meeting Scheduler Agent",
+  "agent_id": "697acea3814f1038c09862d1",
+  "agent_purpose": "assistant",
+  "description": "Schedules meetings by proposing available times from Calendly or providing mock scheduling data",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "meeting_times": [
+        {
+          "date": "string",
+          "time": "string",
+          "timezone": "string",
+          "duration_minutes": "number"
+        }
+      ],
+      "confirmation_message": "string",
+      "calendly_link": "string",
+      "meeting_scheduled": "boolean"
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "meeting_times": [
+        {
+          "date": "2024-06-10",
+          "time": "10:00",
+          "timezone": "PST",
+          "duration_minutes": 30
+        },
+        {
+          "date": "2024-06-11",
+          "time": "13:00",
+          "timezone": "PST",
+          "duration_minutes": 30
+        },
+        {
+          "date": "2024-06-12",
+          "time": "15:00",
+          "timezone": "PST",
+          "duration_minutes": 30
+        }
+      ],
+      "confirmation_message": "Here are 3 available time slots for a 30-minute demo call with John Doe next week. Please select your preferred time.",
+      "calendly_link": "https://calendly.com/sample-link",
+      "meeting_scheduled": false
+    },
+    "metadata": {
+      "agent_name": "Meeting Scheduler Agent",
+      "timestamp": "2024-06-07T08:00:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-29T03:12:25.211104",
+  "test_message_used": "Hello, provide a sample response",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "meeting_times": [
+        {
+          "date": "2024-06-10",
+          "time": "10:00",
+          "timezone": "PST",
+          "duration_minutes": 30
+        },
+        {
+          "date": "2024-06-11",
+          "time": "13:00",
+          "timezone": "PST",
+          "duration_minutes": 30
+        },
+        {
+          "date": "2024-06-12",
+          "time": "15:00",
+          "timezone": "PST",
+          "duration_minutes": 30
+        }
+      ],
+      "confirmation_message": "Here are 3 available time slots for a 30-minute demo call with John Doe next week. Please select your preferred time.",
+      "calendly_link": "https://calendly.com/sample-link",
+      "meeting_scheduled": false
+    },
+    "metadata": {
+      "agent_name": "Meeting Scheduler Agent",
+      "timestamp": "2024-06-07T08:00:00Z"
+    }
+  },
+  "test_passed": true
+}

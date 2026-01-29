@@ -1,0 +1,50 @@
+{
+  "agent_name": "LinkedIn Content Agent",
+  "agent_id": "697ace8623e56dc88c1ff0c6",
+  "test_message": "Generate LinkedIn post about AI automation trends in enterprise software for AE with professional tone",
+  "expected_purpose": "assistant",
+  "timestamp": "2026-01-29T03:09:55.909640",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "success",
+    "result": {
+      "posts": [
+        {
+          "post_id": "1",
+          "ae_name": "Agent Test User",
+          "content": "\ud83d\ude80 As we step into a new era of digital transformation, AI automation is not just a buzzword\u2014it's reshaping enterprise software architecture. Companies leveraging AI are not only streamlining their operations but are also enhancing the decision-making process significantly. \n\n\ud83d\udca1 The integration of AI in enterprise software solutions is enabling businesses to analyze data in real-time, foresee market trends, and optimize resource allocation like never before. Imagine a world where repetitive tasks are handled by intelligent systems, allowing teams to focus on strategic initiatives instead. \n\n\ud83d\udcca With the global AI software market projected to hit unprecedented heights in the coming years, those who harness these technologies effectively will stand out in highly competitive markets. It's time for enterprises to evolve or risk being left behind. \n\n\ud83d\udd17 Let\u2019s foster discussions around AI automation\u2014how is your organization preparing for this transition? Share your thoughts and insights below! \n\n#AI #Automation #EnterpriseSoftware #DigitalTransformation #Innovation",
+          "post_type": "insight",
+          "hashtags": [
+            "AI",
+            "Automation",
+            "EnterpriseSoftware",
+            "DigitalTransformation",
+            "Innovation"
+          ],
+          "estimated_engagement_score": "85",
+          "best_time_to_post": "2023-10-03T14:00:00Z"
+        }
+      ],
+      "content_themes": [
+        "AI Automation",
+        "Enterprise Software Trends",
+        "Digital Transformation"
+      ],
+      "style_match_scores": {
+        "Agent Test User": 90
+      },
+      "trend_topics_used": [
+        "AI in Enterprise Software",
+        "Automation Trends",
+        "Digital Transformation"
+      ]
+    },
+    "metadata": {
+      "agent_name": "LinkedIn Content Agent",
+      "timestamp": "2023-10-03T12:00:00Z",
+      "generation_batch_id": "batch_001"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"success\",\n  \"result\": {\n    \"posts\": [\n      {\n        \"post_id\": \"1\",\n        \"ae_name\": \"Agent Test User\",\n        \"content\": \"\ud83d\ude80 As we step into a new era of digital transformation, AI automation is not just a buzzword\u2014it's reshaping enterprise software architecture. Companies leveraging AI are not only streamlining their operations but are also enhancing the decision-making process significantly. \\n\\n\ud83d\udca1 The integration of AI in enterprise software solutions is enabling businesses to analyze data in real-time, foresee market trends, and optimize resource allocation like never before. Imagine a world where repetitive tasks are handled by intelligent systems, allowing teams to focus on strategic initiatives instead. \\n\\n\ud83d\udcca With the global AI software market projected to hit unprecedented heights in the coming years, those who harness these technologies effectively will stand out in highly competitive markets. It's time for enterprises to evolve or risk being left behind. \\n\\n\ud83d\udd17 Let\u2019s foster discussions around AI automation\u2014how is your organization preparing for this transition? Share your thoughts and insights below! \\n\\n#AI #Automation #EnterpriseSoftware #DigitalTransformation #Innovation\",\n        \"post_type\": \"insight\",\n        \"hashtags\": [\"AI\", \"Automation\", \"EnterpriseSoftware\", \"DigitalTransformation\", \"Innovation\"],\n        \"estimated_engagement_score\": \"85\",\n        \"best_time_to_post\": \"2023-10-03T14:00:00Z\"\n      }\n    ],\n    \"content_themes\": [\"AI Automation\", \"Enterprise Software Trends\", \"Digital Transformation\"],\n    \"style_match_scores\": {\n      \"Agent Test User\": 90\n    },\n    \"trend_topics_used\": [\"AI in Enterprise Software\", \"Automation Trends\", \"Digital Transformation\"]\n  },\n  \"metadata\": {\n    \"agent_name\": \"LinkedIn Content Agent\",\n    \"timestamp\": \"2023-10-03T12:00:00Z\",\n    \"generation_batch_id\": \"batch_001\"\n  }\n}"
+}

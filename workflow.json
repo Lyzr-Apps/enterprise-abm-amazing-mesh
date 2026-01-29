@@ -1,0 +1,273 @@
+{
+  "workflow_name": "Gojberry ABM Automation Platform",
+  "version": "1.0.0",
+  "created_at": "2026-01-29T00:00:00Z",
+  "nodes": [
+    {
+      "id": "campaign_trigger",
+      "type": "Input",
+      "label": "Process Leads Button",
+      "nodeCategory": "input",
+      "position": { "x": 100, "y": 100 }
+    },
+    {
+      "id": "lead_processing_manager",
+      "type": "Agent",
+      "label": "Lead Processing Coordinator",
+      "nodeCategory": "agent",
+      "agent_id": "697ace4fbc6eb6293f5503f1",
+      "agent_type": "manager",
+      "position": { "x": 400, "y": 100 }
+    },
+    {
+      "id": "lead_enrichment_agent",
+      "type": "Agent",
+      "label": "Lead Enrichment Agent",
+      "nodeCategory": "agent",
+      "agent_id": "697acded814f1038c09862c5",
+      "agent_type": "sub_agent",
+      "position": { "x": 700, "y": 50 }
+    },
+    {
+      "id": "icp_scoring_agent",
+      "type": "Agent",
+      "label": "ICP Scoring Agent",
+      "nodeCategory": "agent",
+      "agent_id": "697ace07814f1038c09862c6",
+      "agent_type": "sub_agent",
+      "position": { "x": 1000, "y": 50 }
+    },
+    {
+      "id": "message_generation_agent",
+      "type": "Agent",
+      "label": "Message Generation Agent",
+      "nodeCategory": "agent",
+      "agent_id": "697ace27c03792e039e5ada5",
+      "agent_type": "sub_agent",
+      "position": { "x": 1300, "y": 50 }
+    },
+    {
+      "id": "qualified_leads_output",
+      "type": "Output",
+      "label": "Qualified Leads with Draft Messages",
+      "nodeCategory": "end",
+      "position": { "x": 1600, "y": 100 }
+    },
+    {
+      "id": "email_trigger",
+      "type": "Input",
+      "label": "Approve & Send Button",
+      "nodeCategory": "input",
+      "position": { "x": 100, "y": 300 }
+    },
+    {
+      "id": "email_delivery_agent",
+      "type": "Agent",
+      "label": "Email Delivery Agent",
+      "nodeCategory": "agent",
+      "agent_id": "697ace6bc03792e039e5adaa",
+      "agent_type": "independent",
+      "position": { "x": 400, "y": 300 }
+    },
+    {
+      "id": "email_sent_output",
+      "type": "Output",
+      "label": "Email Sent Confirmation",
+      "nodeCategory": "end",
+      "position": { "x": 700, "y": 300 }
+    },
+    {
+      "id": "linkedin_trigger",
+      "type": "Input",
+      "label": "Daily Schedule / Generate Posts",
+      "nodeCategory": "input",
+      "position": { "x": 100, "y": 450 }
+    },
+    {
+      "id": "linkedin_content_agent",
+      "type": "Agent",
+      "label": "LinkedIn Content Agent",
+      "nodeCategory": "agent",
+      "agent_id": "697ace8623e56dc88c1ff0c6",
+      "agent_type": "independent",
+      "position": { "x": 400, "y": 450 }
+    },
+    {
+      "id": "linkedin_posts_output",
+      "type": "Output",
+      "label": "Generated LinkedIn Posts",
+      "nodeCategory": "end",
+      "position": { "x": 700, "y": 450 }
+    },
+    {
+      "id": "meeting_trigger",
+      "type": "Input",
+      "label": "Schedule Meeting Button",
+      "nodeCategory": "input",
+      "position": { "x": 100, "y": 600 }
+    },
+    {
+      "id": "meeting_scheduler_agent",
+      "type": "Agent",
+      "label": "Meeting Scheduler Agent",
+      "nodeCategory": "agent",
+      "agent_id": "697acea3814f1038c09862d1",
+      "agent_type": "independent",
+      "position": { "x": 400, "y": 600 }
+    },
+    {
+      "id": "meeting_confirmation_output",
+      "type": "Output",
+      "label": "Meeting Confirmation",
+      "nodeCategory": "end",
+      "position": { "x": 700, "y": 600 }
+    },
+    {
+      "id": "style_analysis_trigger",
+      "type": "Input",
+      "label": "Analyze Style Button",
+      "nodeCategory": "input",
+      "position": { "x": 100, "y": 750 }
+    },
+    {
+      "id": "writing_style_analyzer_agent",
+      "type": "Agent",
+      "label": "Writing Style Analyzer Agent",
+      "nodeCategory": "agent",
+      "agent_id": "697acec2814f1038c09862d2",
+      "agent_type": "independent",
+      "position": { "x": 400, "y": 750 }
+    },
+    {
+      "id": "style_profile_output",
+      "type": "Output",
+      "label": "Style Profile",
+      "nodeCategory": "end",
+      "position": { "x": 700, "y": 750 }
+    }
+  ],
+  "edges": [
+    { "source": "campaign_trigger", "target": "lead_processing_manager" },
+    { "source": "lead_processing_manager", "target": "lead_enrichment_agent" },
+    { "source": "lead_enrichment_agent", "target": "icp_scoring_agent" },
+    { "source": "icp_scoring_agent", "target": "message_generation_agent" },
+    { "source": "message_generation_agent", "target": "qualified_leads_output" },
+    { "source": "email_trigger", "target": "email_delivery_agent" },
+    { "source": "email_delivery_agent", "target": "email_sent_output" },
+    { "source": "linkedin_trigger", "target": "linkedin_content_agent" },
+    { "source": "linkedin_content_agent", "target": "linkedin_posts_output" },
+    { "source": "meeting_trigger", "target": "meeting_scheduler_agent" },
+    { "source": "meeting_scheduler_agent", "target": "meeting_confirmation_output" },
+    { "source": "style_analysis_trigger", "target": "writing_style_analyzer_agent" },
+    { "source": "writing_style_analyzer_agent", "target": "style_profile_output" }
+  ],
+  "agents": {
+    "697ace4fbc6eb6293f5503f1": {
+      "name": "Lead Processing Coordinator",
+      "type": "Manager",
+      "description": "Orchestrates the lead enrichment, scoring, and message generation workflow",
+      "provider": "OpenAI",
+      "model": "gpt-4.1",
+      "temperature": 0.3,
+      "top_p": 1,
+      "trigger": "Process Leads Button on Campaign Dashboard",
+      "manages": [
+        "697acded814f1038c09862c5",
+        "697ace07814f1038c09862c6",
+        "697ace27c03792e039e5ada5"
+      ]
+    },
+    "697acded814f1038c09862c5": {
+      "name": "Lead Enrichment Agent",
+      "type": "Sub-Agent",
+      "description": "Fetches company firmographics, technographics, and contact details from Apollo",
+      "provider": "Perplexity",
+      "model": "sonar-pro",
+      "temperature": 0.2,
+      "top_p": 1,
+      "trigger": "Auto (via Manager)",
+      "tools": ["Apollo API"],
+      "managed_by": "697ace4fbc6eb6293f5503f1"
+    },
+    "697ace07814f1038c09862c6": {
+      "name": "ICP Scoring Agent",
+      "type": "Sub-Agent",
+      "description": "Evaluates enriched leads against campaign ICP criteria",
+      "provider": "OpenAI",
+      "model": "gpt-4.1",
+      "temperature": 0.2,
+      "top_p": 1,
+      "trigger": "Auto (via Manager)",
+      "knowledge_base": "697acdf6115a3970d17438d3",
+      "managed_by": "697ace4fbc6eb6293f5503f1"
+    },
+    "697ace27c03792e039e5ada5": {
+      "name": "Message Generation Agent",
+      "type": "Sub-Agent",
+      "description": "Crafts personalized email sequences and LinkedIn messages",
+      "provider": "OpenAI",
+      "model": "gpt-4.1",
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "trigger": "Auto (via Manager)",
+      "knowledge_base": "697ace15115a3970d17438d4",
+      "managed_by": "697ace4fbc6eb6293f5503f1"
+    },
+    "697ace6bc03792e039e5adaa": {
+      "name": "Email Delivery Agent",
+      "type": "Independent",
+      "description": "Sends approved email sequences via Gmail",
+      "provider": "OpenAI",
+      "model": "gpt-4.1",
+      "temperature": 0.2,
+      "top_p": 1,
+      "trigger": "Approve & Send on QA Inbox",
+      "tools": ["Gmail"]
+    },
+    "697ace8623e56dc88c1ff0c6": {
+      "name": "LinkedIn Content Agent",
+      "type": "Independent",
+      "description": "Generates daily LinkedIn posts based on writing styles and trends",
+      "provider": "Perplexity",
+      "model": "sonar-pro",
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "trigger": "Scheduled Daily + Generate Posts on Content Hub",
+      "knowledge_base": "697ace15115a3970d17438d4"
+    },
+    "697acea3814f1038c09862d1": {
+      "name": "Meeting Scheduler Agent",
+      "type": "Independent",
+      "description": "Proposes meeting times based on Calendly availability",
+      "provider": "OpenAI",
+      "model": "gpt-4.1",
+      "temperature": 0.3,
+      "top_p": 1,
+      "trigger": "Schedule Meeting on Lead Detail",
+      "tools": ["Calendly"]
+    },
+    "697acec2814f1038c09862d2": {
+      "name": "Writing Style Analyzer Agent",
+      "type": "Independent",
+      "description": "Analyzes writing samples to extract style profiles",
+      "provider": "OpenAI",
+      "model": "gpt-4.1",
+      "temperature": 0.4,
+      "top_p": 1,
+      "trigger": "Analyze Style on Team Settings",
+      "knowledge_base": "697ace15115a3970d17438d4"
+    }
+  },
+  "knowledge_bases": {
+    "697acdf6115a3970d17438d3": {
+      "name": "ICP Definitions Knowledge Base",
+      "collection_name": "icpdefinitionsknowledgebaseru1x",
+      "description": "ICP definitions, persona criteria, and qualification frameworks"
+    },
+    "697ace15115a3970d17438d4": {
+      "name": "Writing Samples and Context Knowledge Base",
+      "collection_name": "writingsamplesandcontextknowledgebasefe6x",
+      "description": "Writing samples, campaign briefs, context board updates, and product documentation"
+    }
+  }
+}

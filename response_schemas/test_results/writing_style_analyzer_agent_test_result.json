@@ -1,0 +1,60 @@
+{
+  "agent_name": "Writing Style Analyzer Agent",
+  "agent_id": "697acec2814f1038c09862d2",
+  "test_message": "Analyze writing style: Hi there! Hope you're doing well. I wanted to reach out because I think we could help your team scale faster. Let me know if you're interested in chatting!",
+  "expected_purpose": "assistant",
+  "timestamp": "2026-01-29T03:10:03.497444",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "success",
+    "result": {
+      "style_profile": {
+        "team_member_name": "Unknown",
+        "profile_id": "style_profile_001",
+        "tone_analysis": {
+          "formality_score": 50,
+          "warmth_score": 82,
+          "directness_score": 65,
+          "primary_tone": "friendly"
+        },
+        "structure_patterns": {
+          "avg_sentence_length": 11,
+          "avg_paragraph_length": 4,
+          "opening_style": "Friendly greeting",
+          "closing_style": "Open-ended invitation",
+          "uses_questions": true,
+          "uses_storytelling": false
+        },
+        "vocabulary_profile": {
+          "reading_level": "basic/intermediate",
+          "signature_phrases": [
+            "Hope you're doing well.",
+            "Let me know if you're interested"
+          ],
+          "common_words": [
+            "team",
+            "help",
+            "chatting",
+            "reach out"
+          ],
+          "avoided_words": [],
+          "emoji_usage": "none"
+        },
+        "unique_characteristics": [
+          "Uses exclamation marks to convey warmth",
+          "Opens with a casual, positive greeting",
+          "Direct call-to-action presented in a polite manner"
+        ],
+        "sample_count_analyzed": 1,
+        "confidence_score": 70
+      }
+    },
+    "metadata": {
+      "agent_name": "Writing Style Analyzer Agent",
+      "timestamp": "2024-06-13T13:02:59Z",
+      "analysis_version": "1.0"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"success\",\n  \"result\": {\n    \"style_profile\": {\n      \"team_member_name\": \"Unknown\",\n      \"profile_id\": \"style_profile_001\",\n      \"tone_analysis\": {\n        \"formality_score\": 50,\n        \"warmth_score\": 82,\n        \"directness_score\": 65,\n        \"primary_tone\": \"friendly\"\n      },\n      \"structure_patterns\": {\n        \"avg_sentence_length\": 11,\n        \"avg_paragraph_length\": 4,\n        \"opening_style\": \"Friendly greeting\",\n        \"closing_style\": \"Open-ended invitation\",\n        \"uses_questions\": true,\n        \"uses_storytelling\": false\n      },\n      \"vocabulary_profile\": {\n        \"reading_level\": \"basic/intermediate\",\n        \"signature_phrases\": [\"Hope you're doing well.\", \"Let me know if you're interested\"],\n        \"common_words\": [\"team\", \"help\", \"chatting\", \"reach out\"],\n        \"avoided_words\": [],\n        \"emoji_usage\": \"none\"\n      },\n      \"unique_characteristics\": [\n        \"Uses exclamation marks to convey warmth\",\n        \"Opens with a casual, positive greeting\",\n        \"Direct call-to-action presented in a polite manner\"\n      ],\n      \"sample_count_analyzed\": 1,\n      \"confidence_score\": 70\n    }\n  },\n  \"metadata\": {\n    \"agent_name\": \"Writing Style Analyzer Agent\",\n    \"timestamp\": \"2024-06-13T13:02:59Z\",\n    \"analysis_version\": \"1.0\"\n  }\n}"
+}

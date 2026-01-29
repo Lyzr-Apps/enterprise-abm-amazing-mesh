@@ -1,0 +1,156 @@
+{
+  "agent_name": "Writing Style Analyzer Agent",
+  "agent_id": "697acec2814f1038c09862d2",
+  "agent_purpose": "analyzer",
+  "description": "Analyzes writing samples to extract comprehensive style profiles with tone, structure, and vocabulary patterns",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "style_profile": {
+        "team_member_name": "string",
+        "profile_id": "string",
+        "tone_analysis": {
+          "formality_score": "number",
+          "warmth_score": "number",
+          "directness_score": "number",
+          "primary_tone": "string"
+        },
+        "structure_patterns": {
+          "avg_sentence_length": "number",
+          "avg_paragraph_length": "number",
+          "opening_style": "string",
+          "closing_style": "string",
+          "uses_questions": "boolean",
+          "uses_storytelling": "boolean"
+        },
+        "vocabulary_profile": {
+          "reading_level": "string",
+          "signature_phrases": [
+            "string"
+          ],
+          "common_words": [
+            "string"
+          ],
+          "avoided_words": [
+            "any"
+          ],
+          "emoji_usage": "string"
+        },
+        "unique_characteristics": [
+          "string"
+        ],
+        "sample_count_analyzed": "number",
+        "confidence_score": "number"
+      }
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string",
+      "analysis_version": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "style_profile": {
+        "team_member_name": "Unknown",
+        "profile_id": "style_profile_001",
+        "tone_analysis": {
+          "formality_score": 50,
+          "warmth_score": 82,
+          "directness_score": 65,
+          "primary_tone": "friendly"
+        },
+        "structure_patterns": {
+          "avg_sentence_length": 11,
+          "avg_paragraph_length": 4,
+          "opening_style": "Friendly greeting",
+          "closing_style": "Open-ended invitation",
+          "uses_questions": true,
+          "uses_storytelling": false
+        },
+        "vocabulary_profile": {
+          "reading_level": "basic/intermediate",
+          "signature_phrases": [
+            "Hope you're doing well.",
+            "Let me know if you're interested"
+          ],
+          "common_words": [
+            "team",
+            "help",
+            "chatting",
+            "reach out"
+          ],
+          "avoided_words": [],
+          "emoji_usage": "none"
+        },
+        "unique_characteristics": [
+          "Uses exclamation marks to convey warmth",
+          "Opens with a casual, positive greeting",
+          "Direct call-to-action presented in a polite manner"
+        ],
+        "sample_count_analyzed": 1,
+        "confidence_score": 70
+      }
+    },
+    "metadata": {
+      "agent_name": "Writing Style Analyzer Agent",
+      "timestamp": "2024-06-13T13:02:59Z",
+      "analysis_version": "1.0"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-29T03:10:03.498451",
+  "test_message_used": "Analyze this sample data for testing",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "style_profile": {
+        "team_member_name": "Unknown",
+        "profile_id": "style_profile_001",
+        "tone_analysis": {
+          "formality_score": 50,
+          "warmth_score": 82,
+          "directness_score": 65,
+          "primary_tone": "friendly"
+        },
+        "structure_patterns": {
+          "avg_sentence_length": 11,
+          "avg_paragraph_length": 4,
+          "opening_style": "Friendly greeting",
+          "closing_style": "Open-ended invitation",
+          "uses_questions": true,
+          "uses_storytelling": false
+        },
+        "vocabulary_profile": {
+          "reading_level": "basic/intermediate",
+          "signature_phrases": [
+            "Hope you're doing well.",
+            "Let me know if you're interested"
+          ],
+          "common_words": [
+            "team",
+            "help",
+            "chatting",
+            "reach out"
+          ],
+          "avoided_words": [],
+          "emoji_usage": "none"
+        },
+        "unique_characteristics": [
+          "Uses exclamation marks to convey warmth",
+          "Opens with a casual, positive greeting",
+          "Direct call-to-action presented in a polite manner"
+        ],
+        "sample_count_analyzed": 1,
+        "confidence_score": 70
+      }
+    },
+    "metadata": {
+      "agent_name": "Writing Style Analyzer Agent",
+      "timestamp": "2024-06-13T13:02:59Z",
+      "analysis_version": "1.0"
+    }
+  },
+  "test_passed": true
+}

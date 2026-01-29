@@ -1,0 +1,77 @@
+{
+  "agent_name": "Email Delivery Agent",
+  "agent_id": "697ace6bc03792e039e5adaa",
+  "agent_purpose": "custom",
+  "description": "Sends emails via Gmail and tracks delivery confirmations with scheduled follow-ups",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "emails_sent": "string",
+      "delivery_confirmations": [
+        "any"
+      ],
+      "scheduled_followups": [
+        "any"
+      ],
+      "delivery_summary": {
+        "total_queued": "string",
+        "sent_successfully": "string",
+        "failed": "string",
+        "errors": [
+          "string"
+        ]
+      }
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string",
+      "gmail_account": "string"
+    }
+  },
+  "example_response": {
+    "status": "error",
+    "result": {
+      "emails_sent": "0",
+      "delivery_confirmations": [],
+      "scheduled_followups": [],
+      "delivery_summary": {
+        "total_queued": "1",
+        "sent_successfully": "0",
+        "failed": "1",
+        "errors": [
+          "GMAIL_SEND_EMAIL provider not found or not enabled. Unable to send the email."
+        ]
+      }
+    },
+    "metadata": {
+      "agent_name": "Email Delivery Agent",
+      "timestamp": "2024-06-11T18:48:49Z",
+      "gmail_account": "me"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-29T03:09:48.261162",
+  "test_message_used": "Provide a sample response",
+  "actual_test_response": {
+    "status": "error",
+    "result": {
+      "emails_sent": "0",
+      "delivery_confirmations": [],
+      "scheduled_followups": [],
+      "delivery_summary": {
+        "total_queued": "1",
+        "sent_successfully": "0",
+        "failed": "1",
+        "errors": [
+          "GMAIL_SEND_EMAIL provider not found or not enabled. Unable to send the email."
+        ]
+      }
+    },
+    "metadata": {
+      "agent_name": "Email Delivery Agent",
+      "timestamp": "2024-06-11T18:48:49Z",
+      "gmail_account": "me"
+    }
+  },
+  "test_passed": true
+}

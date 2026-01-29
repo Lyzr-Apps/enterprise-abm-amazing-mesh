@@ -1,0 +1,38 @@
+{
+  "agent_name": "Lead Enrichment Agent",
+  "agent_id": "697acded814f1038c09862c5",
+  "test_message": "Enrich lead: john@acmecorp.com, Acme Corp",
+  "expected_purpose": "assistant",
+  "timestamp": "2026-01-29T03:12:22.343582",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "success",
+    "result": {
+      "company_name": "Acme Corp",
+      "employee_count": 150,
+      "technologies": [
+        "AWS",
+        "React",
+        "Node.js"
+      ],
+      "recent_news": [
+        "Acme Corp launches a new product line",
+        "Acme Corp announces partnership with XYZ"
+      ],
+      "contact_info": {
+        "email": "contact@acmecorp.com",
+        "phone": "+1-555-0123",
+        "linkedin": "https://www.linkedin.com/company/acmecorp"
+      },
+      "industry": "Technology",
+      "revenue": "$20 million",
+      "headquarters": "New York, NY"
+    },
+    "metadata": {
+      "agent_name": "Lead Enrichment Agent",
+      "timestamp": "2023-10-01T12:00:00Z"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"success\",\n  \"result\": {\n    \"company_name\": \"Acme Corp\",\n    \"employee_count\": 150,\n    \"technologies\": [\"AWS\", \"React\", \"Node.js\"],\n    \"recent_news\": [\"Acme Corp launches a new product line\", \"Acme Corp announces partnership with XYZ\"],\n    \"contact_info\": {\n      \"email\": \"contact@acmecorp.com\",\n      \"phone\": \"+1-555-0123\",\n      \"linkedin\": \"https://www.linkedin.com/company/acmecorp\"\n    },\n    \"industry\": \"Technology\",\n    \"revenue\": \"$20 million\",\n    \"headquarters\": \"New York, NY\"\n  },\n  \"metadata\": {\n    \"agent_name\": \"Lead Enrichment Agent\",\n    \"timestamp\": \"2023-10-01T12:00:00Z\"\n  }\n}"
+}

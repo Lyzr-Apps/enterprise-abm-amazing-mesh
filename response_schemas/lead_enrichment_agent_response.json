@@ -1,0 +1,91 @@
+{
+  "agent_name": "Lead Enrichment Agent",
+  "agent_id": "697acded814f1038c09862c5",
+  "agent_purpose": "parser",
+  "description": "Enriches lead data with company information, technographics, and contact details from Apollo API",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "company_name": "string",
+      "employee_count": "number",
+      "technologies": [
+        "string"
+      ],
+      "recent_news": [
+        "string"
+      ],
+      "contact_info": {
+        "email": "string",
+        "phone": "string",
+        "linkedin": "string"
+      },
+      "industry": "string",
+      "revenue": "string",
+      "headquarters": "string"
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "company_name": "Acme Corp",
+      "employee_count": 150,
+      "technologies": [
+        "AWS",
+        "React",
+        "Node.js"
+      ],
+      "recent_news": [
+        "Acme Corp launches a new product line",
+        "Acme Corp announces partnership with XYZ"
+      ],
+      "contact_info": {
+        "email": "contact@acmecorp.com",
+        "phone": "+1-555-0123",
+        "linkedin": "https://www.linkedin.com/company/acmecorp"
+      },
+      "industry": "Technology",
+      "revenue": "$20 million",
+      "headquarters": "New York, NY"
+    },
+    "metadata": {
+      "agent_name": "Lead Enrichment Agent",
+      "timestamp": "2023-10-01T12:00:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-29T03:12:22.346480",
+  "test_message_used": "Parse this sample text for testing",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "company_name": "Acme Corp",
+      "employee_count": 150,
+      "technologies": [
+        "AWS",
+        "React",
+        "Node.js"
+      ],
+      "recent_news": [
+        "Acme Corp launches a new product line",
+        "Acme Corp announces partnership with XYZ"
+      ],
+      "contact_info": {
+        "email": "contact@acmecorp.com",
+        "phone": "+1-555-0123",
+        "linkedin": "https://www.linkedin.com/company/acmecorp"
+      },
+      "industry": "Technology",
+      "revenue": "$20 million",
+      "headquarters": "New York, NY"
+    },
+    "metadata": {
+      "agent_name": "Lead Enrichment Agent",
+      "timestamp": "2023-10-01T12:00:00Z"
+    }
+  },
+  "test_passed": true
+}

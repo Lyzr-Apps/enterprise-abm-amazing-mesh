@@ -1,0 +1,31 @@
+{
+  "agent_name": "Email Delivery Agent",
+  "agent_id": "697ace6bc03792e039e5adaa",
+  "test_message": "Send email to john@acmecorp.com with subject 'Scaling Your Infrastructure' and message 'Hi John, I noticed Acme Corp is growing rapidly...'",
+  "expected_purpose": "assistant",
+  "timestamp": "2026-01-29T03:09:48.259846",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "error",
+    "result": {
+      "emails_sent": "0",
+      "delivery_confirmations": [],
+      "scheduled_followups": [],
+      "delivery_summary": {
+        "total_queued": "1",
+        "sent_successfully": "0",
+        "failed": "1",
+        "errors": [
+          "GMAIL_SEND_EMAIL provider not found or not enabled. Unable to send the email."
+        ]
+      }
+    },
+    "metadata": {
+      "agent_name": "Email Delivery Agent",
+      "timestamp": "2024-06-11T18:48:49Z",
+      "gmail_account": "me"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"error\",\n  \"result\": {\n    \"emails_sent\": \"0\",\n    \"delivery_confirmations\": [],\n    \"scheduled_followups\": [],\n    \"delivery_summary\": {\n      \"total_queued\": \"1\",\n      \"sent_successfully\": \"0\",\n      \"failed\": \"1\",\n      \"errors\": [\"GMAIL_SEND_EMAIL provider not found or not enabled. Unable to send the email.\"]\n    }\n  },\n  \"metadata\": {\n    \"agent_name\": \"Email Delivery Agent\",\n    \"timestamp\": \"2024-06-11T18:48:49Z\",\n    \"gmail_account\": \"me\"\n  }\n}"
+}

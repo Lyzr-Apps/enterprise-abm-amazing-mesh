@@ -1,0 +1,56 @@
+{
+  "agent_name": "Lead Processing Coordinator",
+  "agent_id": "697ace4fbc6eb6293f5503f1",
+  "test_message": "Process leads for enterprise software campaign: John Doe (john@acmecorp.com), VP Engineering at Acme Corp",
+  "expected_purpose": "manager",
+  "timestamp": "2026-01-29T03:15:02.931975",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "success",
+    "result": {
+      "qualified_leads": [
+        {
+          "lead_id": "john-doe-acmecorp",
+          "name": "John Doe",
+          "company": "Acme Corp",
+          "title": "VP Engineering",
+          "email": "john@acmecorp.com",
+          "icp_score": 92,
+          "icp_reasoning": "Lead is VP Engineering at Acme Corp, a well-known enterprise. Matches ICP for decision-maker authority and company scale relevant to enterprise software solutions.",
+          "email_sequence": [
+            {
+              "step": 1,
+              "subject": "Unlocking Operational Efficiency at Acme Corp",
+              "body": "Hi John, I'm reaching out to introduce how our enterprise software can streamline engineering processes at Acme Corp. Would you be open to a brief call to explore solutions tailored to your team's needs?"
+            },
+            {
+              "step": 2,
+              "subject": "Following Up: Enterprise Software for Acme Corp",
+              "body": "Hi John, I wanted to follow up on my previous email regarding efficiency gains in engineering. Are you available this week for a short discussion on how our platform supports leaders like yourself?"
+            }
+          ],
+          "linkedin_message": "Hi John, I noticed your leadership role at Acme Corp and thought our enterprise software might align with your goals for engineering excellence. Would you be open to connecting for a quick chat?"
+        }
+      ],
+      "processing_summary": {
+        "total_leads_processed": 1,
+        "qualified_count": 1,
+        "disqualified_count": 0,
+        "enrichment_status": "complete",
+        "scoring_status": "complete",
+        "message_generation_status": "complete"
+      }
+    },
+    "metadata": {
+      "agent_name": "Lead Processing Coordinator",
+      "timestamp": "2024-06-09T14:23:00Z",
+      "workflow_steps": [
+        "enrichment",
+        "scoring",
+        "message_generation"
+      ]
+    }
+  },
+  "raw_response": "{\n  \"status\": \"success\",\n  \"result\": {\n    \"qualified_leads\": [\n      {\n        \"lead_id\": \"john-doe-acmecorp\",\n        \"name\": \"John Doe\",\n        \"company\": \"Acme Corp\",\n        \"title\": \"VP Engineering\",\n        \"email\": \"john@acmecorp.com\",\n        \"icp_score\": 92,\n        \"icp_reasoning\": \"Lead is VP Engineering at Acme Corp, a well-known enterprise. Matches ICP for decision-maker authority and company scale relevant to enterprise software solutions.\",\n        \"email_sequence\": [\n          {\n            \"step\": 1,\n            \"subject\": \"Unlocking Operational Efficiency at Acme Corp\",\n            \"body\": \"Hi John, I'm reaching out to introduce how our enterprise software can streamline engineering processes at Acme Corp. Would you be open to a brief call to explore solutions tailored to your team's needs?\"\n          },\n          {\n            \"step\": 2,\n            \"subject\": \"Following Up: Enterprise Software for Acme Corp\",\n            \"body\": \"Hi John, I wanted to follow up on my previous email regarding efficiency gains in engineering. Are you available this week for a short discussion on how our platform supports leaders like yourself?\"\n          }\n        ],\n        \"linkedin_message\": \"Hi John, I noticed your leadership role at Acme Corp and thought our enterprise software might align with your goals for engineering excellence. Would you be open to connecting for a quick chat?\"\n      }\n    ],\n    \"processing_summary\": {\n      \"total_leads_processed\": 1,\n      \"qualified_count\": 1,\n      \"disqualified_count\": 0,\n      \"enrichment_status\": \"complete\",\n      \"scoring_status\": \"complete\",\n      \"message_generation_status\": \"complete\"\n    }\n  },\n  \"metadata\": {\n    \"agent_name\": \"Lead Processing Coordinator\",\n    \"timestamp\": \"2024-06-09T14:23:00Z\",\n    \"workflow_steps\": [\"enrichment\", \"scoring\", \"message_generation\"]\n  }\n}"
+}

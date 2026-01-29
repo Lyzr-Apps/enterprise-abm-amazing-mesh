@@ -1,0 +1,154 @@
+{
+  "agent_name": "Message Generation Agent",
+  "agent_id": "697ace27c03792e039e5ada5",
+  "agent_purpose": "custom",
+  "description": "Generates personalized email sequences and LinkedIn messages with style matching",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "email_sequence": [
+        {
+          "sequence_number": "number",
+          "subject_line": "string",
+          "body": "string",
+          "personalization_tokens": {
+            "company_name": "string",
+            "trigger": "string"
+          }
+        }
+      ],
+      "linkedin_message": {
+        "connection_request": "string",
+        "follow_up_message": "string"
+      },
+      "style_match_score": "string",
+      "personalization_elements": [
+        "string"
+      ],
+      "recommended_send_schedule": {
+        "email_1": "string",
+        "email_2": "string",
+        "email_3": "string"
+      }
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string",
+      "style_profile_used": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "email_sequence": [
+        {
+          "sequence_number": 1,
+          "subject_line": "Scaling Challenges at Acme Corp? Here\u2019s a Proven Approach",
+          "body": "Hi John,\n\nI noticed Acme Corp is in a phase of rapid growth, and as VP of Engineering, you\u2019re likely dealing with some unique challenges around scaling infrastructure. Many engineering leaders I speak with mention how critical it is to balance uptime, cost efficiency, and team productivity during this phase.\n\nI\u2019d love to share how we\u2019ve helped teams like yours scale seamlessly without disrupting dev workflows or sacrificing reliability. If you\u2019re open to it, let\u2019s connect for a quick chat.\n\nBest,\n[Your Name]",
+          "personalization_tokens": {
+            "company_name": "Acme Corp",
+            "trigger": "scaling infrastructure"
+          }
+        },
+        {
+          "sequence_number": 2,
+          "subject_line": "Following Up: Infrastructure Solutions for Acme Corp",
+          "body": "Hi John,\n\nJust wanted to circle back on my earlier note about supporting your team at Acme Corp with scalable infrastructure solutions. I\u2019d be happy to tailor a brief walkthrough specific to your environment and goals\u2014are you available later this week?\n\nLooking forward to your thoughts.\n\nBest,\n[Your Name]",
+          "personalization_tokens": {
+            "company_name": "Acme Corp",
+            "trigger": "scaling infrastructure"
+          }
+        },
+        {
+          "sequence_number": 3,
+          "subject_line": "Quick Question for Acme Corp\u2019s Engineering Team",
+          "body": "Hi John,\n\nI realize how busy things get when scaling fast. If you\u2019re not the right person for this conversation, would you mind pointing me to who might be best?\n\nWishing you continued success with Acme Corp\u2019s growth!\n\nBest,\n[Your Name]",
+          "personalization_tokens": {
+            "company_name": "Acme Corp",
+            "trigger": "scaling infrastructure"
+          }
+        }
+      ],
+      "linkedin_message": {
+        "connection_request": "Hi John, I\u2019m impressed by Acme Corp\u2019s growth and your work in scaling engineering teams. Would love to connect and share insights on infrastructure optimization.",
+        "follow_up_message": "Thanks for connecting, John! If you\u2019re open to it, I\u2019d be happy to discuss proven approaches that help teams like yours scale infrastructure efficiently as you grow."
+      },
+      "style_match_score": "85",
+      "personalization_elements": [
+        "Direct mention of VP Engineering role",
+        "Reference to Acme Corp\u2019s rapid growth",
+        "Acknowledgement of scaling infrastructure pain point",
+        "Offer of tailored solutions"
+      ],
+      "recommended_send_schedule": {
+        "email_1": "immediate",
+        "email_2": "+3 days",
+        "email_3": "+7 days"
+      }
+    },
+    "metadata": {
+      "agent_name": "Message Generation Agent",
+      "timestamp": "2024-06-14T12:05:00Z",
+      "style_profile_used": "Standard B2B Human-Centric Outreach"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-29T03:09:44.730699",
+  "test_message_used": "Provide a sample response",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "email_sequence": [
+        {
+          "sequence_number": 1,
+          "subject_line": "Scaling Challenges at Acme Corp? Here\u2019s a Proven Approach",
+          "body": "Hi John,\n\nI noticed Acme Corp is in a phase of rapid growth, and as VP of Engineering, you\u2019re likely dealing with some unique challenges around scaling infrastructure. Many engineering leaders I speak with mention how critical it is to balance uptime, cost efficiency, and team productivity during this phase.\n\nI\u2019d love to share how we\u2019ve helped teams like yours scale seamlessly without disrupting dev workflows or sacrificing reliability. If you\u2019re open to it, let\u2019s connect for a quick chat.\n\nBest,\n[Your Name]",
+          "personalization_tokens": {
+            "company_name": "Acme Corp",
+            "trigger": "scaling infrastructure"
+          }
+        },
+        {
+          "sequence_number": 2,
+          "subject_line": "Following Up: Infrastructure Solutions for Acme Corp",
+          "body": "Hi John,\n\nJust wanted to circle back on my earlier note about supporting your team at Acme Corp with scalable infrastructure solutions. I\u2019d be happy to tailor a brief walkthrough specific to your environment and goals\u2014are you available later this week?\n\nLooking forward to your thoughts.\n\nBest,\n[Your Name]",
+          "personalization_tokens": {
+            "company_name": "Acme Corp",
+            "trigger": "scaling infrastructure"
+          }
+        },
+        {
+          "sequence_number": 3,
+          "subject_line": "Quick Question for Acme Corp\u2019s Engineering Team",
+          "body": "Hi John,\n\nI realize how busy things get when scaling fast. If you\u2019re not the right person for this conversation, would you mind pointing me to who might be best?\n\nWishing you continued success with Acme Corp\u2019s growth!\n\nBest,\n[Your Name]",
+          "personalization_tokens": {
+            "company_name": "Acme Corp",
+            "trigger": "scaling infrastructure"
+          }
+        }
+      ],
+      "linkedin_message": {
+        "connection_request": "Hi John, I\u2019m impressed by Acme Corp\u2019s growth and your work in scaling engineering teams. Would love to connect and share insights on infrastructure optimization.",
+        "follow_up_message": "Thanks for connecting, John! If you\u2019re open to it, I\u2019d be happy to discuss proven approaches that help teams like yours scale infrastructure efficiently as you grow."
+      },
+      "style_match_score": "85",
+      "personalization_elements": [
+        "Direct mention of VP Engineering role",
+        "Reference to Acme Corp\u2019s rapid growth",
+        "Acknowledgement of scaling infrastructure pain point",
+        "Offer of tailored solutions"
+      ],
+      "recommended_send_schedule": {
+        "email_1": "immediate",
+        "email_2": "+3 days",
+        "email_3": "+7 days"
+      }
+    },
+    "metadata": {
+      "agent_name": "Message Generation Agent",
+      "timestamp": "2024-06-14T12:05:00Z",
+      "style_profile_used": "Standard B2B Human-Centric Outreach"
+    }
+  },
+  "test_passed": true
+}

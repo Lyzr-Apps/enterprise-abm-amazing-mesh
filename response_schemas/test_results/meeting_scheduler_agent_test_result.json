@@ -1,0 +1,42 @@
+{
+  "agent_name": "Meeting Scheduler Agent",
+  "agent_id": "697acea3814f1038c09862d1",
+  "test_message": "Propose meeting times for John Doe next week, 30-minute demo call",
+  "expected_purpose": "assistant",
+  "timestamp": "2026-01-29T03:12:25.210072",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "success",
+    "result": {
+      "meeting_times": [
+        {
+          "date": "2024-06-10",
+          "time": "10:00",
+          "timezone": "PST",
+          "duration_minutes": 30
+        },
+        {
+          "date": "2024-06-11",
+          "time": "13:00",
+          "timezone": "PST",
+          "duration_minutes": 30
+        },
+        {
+          "date": "2024-06-12",
+          "time": "15:00",
+          "timezone": "PST",
+          "duration_minutes": 30
+        }
+      ],
+      "confirmation_message": "Here are 3 available time slots for a 30-minute demo call with John Doe next week. Please select your preferred time.",
+      "calendly_link": "https://calendly.com/sample-link",
+      "meeting_scheduled": false
+    },
+    "metadata": {
+      "agent_name": "Meeting Scheduler Agent",
+      "timestamp": "2024-06-07T08:00:00Z"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"success\",\n  \"result\": {\n    \"meeting_times\": [\n      {\n        \"date\": \"2024-06-10\",\n        \"time\": \"10:00\",\n        \"timezone\": \"PST\",\n        \"duration_minutes\": 30\n      },\n      {\n        \"date\": \"2024-06-11\",\n        \"time\": \"13:00\",\n        \"timezone\": \"PST\",\n        \"duration_minutes\": 30\n      },\n      {\n        \"date\": \"2024-06-12\",\n        \"time\": \"15:00\",\n        \"timezone\": \"PST\",\n        \"duration_minutes\": 30\n      }\n    ],\n    \"confirmation_message\": \"Here are 3 available time slots for a 30-minute demo call with John Doe next week. Please select your preferred time.\",\n    \"calendly_link\": \"https://calendly.com/sample-link\",\n    \"meeting_scheduled\": false\n  },\n  \"metadata\": {\n    \"agent_name\": \"Meeting Scheduler Agent\",\n    \"timestamp\": \"2024-06-07T08:00:00Z\"\n  }\n}"
+}

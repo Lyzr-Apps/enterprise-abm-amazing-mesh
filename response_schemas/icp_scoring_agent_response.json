@@ -1,0 +1,92 @@
+{
+  "agent_name": "ICP Scoring Agent",
+  "agent_id": "697ace07814f1038c09862c6",
+  "agent_purpose": "analyzer",
+  "description": "Analyzes enriched leads against ICP criteria and generates qualification scores with detailed reasoning",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "overall_score": "number",
+      "qualification_tier": "string",
+      "scoring_breakdown": {
+        "firmographic_score": "number",
+        "technographic_score": "number",
+        "persona_fit_score": "number",
+        "trigger_score": "number"
+      },
+      "fit_factors": [
+        "string"
+      ],
+      "misfit_factors": [
+        "string"
+      ],
+      "reasoning": "string",
+      "recommendation": "string"
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string",
+      "icp_version": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "overall_score": 85,
+      "qualification_tier": "A",
+      "scoring_breakdown": {
+        "firmographic_score": 28,
+        "technographic_score": 23,
+        "persona_fit_score": 20,
+        "trigger_score": 14
+      },
+      "fit_factors": [
+        "Company size (500 employees) aligns with ICP target range",
+        "Enterprise software industry is a primary ICP segment",
+        "Active use of Salesforce and AWS fits core technographic criteria"
+      ],
+      "misfit_factors": [
+        "No specific trigger or buyer persona info provided"
+      ],
+      "reasoning": "Acme Corp strongly matches campaign ICP in terms of size, industry, and technographics, indicating high potential fit. Minor deduction due to missing direct persona and trigger data, but overall attributes warrant Tier A qualification.",
+      "recommendation": "pursue"
+    },
+    "metadata": {
+      "agent_name": "ICP Scoring Agent",
+      "timestamp": "2024-06-13T14:24:00Z",
+      "icp_version": "v1.0"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-29T03:09:34.946893",
+  "test_message_used": "Analyze this sample data for testing",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "overall_score": 85,
+      "qualification_tier": "A",
+      "scoring_breakdown": {
+        "firmographic_score": 28,
+        "technographic_score": 23,
+        "persona_fit_score": 20,
+        "trigger_score": 14
+      },
+      "fit_factors": [
+        "Company size (500 employees) aligns with ICP target range",
+        "Enterprise software industry is a primary ICP segment",
+        "Active use of Salesforce and AWS fits core technographic criteria"
+      ],
+      "misfit_factors": [
+        "No specific trigger or buyer persona info provided"
+      ],
+      "reasoning": "Acme Corp strongly matches campaign ICP in terms of size, industry, and technographics, indicating high potential fit. Minor deduction due to missing direct persona and trigger data, but overall attributes warrant Tier A qualification.",
+      "recommendation": "pursue"
+    },
+    "metadata": {
+      "agent_name": "ICP Scoring Agent",
+      "timestamp": "2024-06-13T14:24:00Z",
+      "icp_version": "v1.0"
+    }
+  },
+  "test_passed": true
+}

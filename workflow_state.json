@@ -1,0 +1,118 @@
+{
+  "workflow_created": true,
+  "agents_created": true,
+  "total_agents": 8,
+  "manager_agents": 1,
+  "sub_agents": 3,
+  "independent_agents": 4,
+  "knowledge_bases": 2,
+  "agents": {
+    "manager": {
+      "lead_processing_coordinator": {
+        "agent_id": "697ace4fbc6eb6293f5503f1",
+        "name": "Lead Processing Coordinator",
+        "type": "Manager",
+        "provider": "OpenAI",
+        "model": "gpt-4.1",
+        "manages": [
+          "697acded814f1038c09862c5",
+          "697ace07814f1038c09862c6",
+          "697ace27c03792e039e5ada5"
+        ]
+      }
+    },
+    "sub_agents": {
+      "lead_enrichment_agent": {
+        "agent_id": "697acded814f1038c09862c5",
+        "name": "Lead Enrichment Agent",
+        "type": "Sub-Agent",
+        "provider": "Perplexity",
+        "model": "sonar-pro",
+        "tools": ["apollo"],
+        "managed_by": "697ace4fbc6eb6293f5503f1"
+      },
+      "icp_scoring_agent": {
+        "agent_id": "697ace07814f1038c09862c6",
+        "name": "ICP Scoring Agent",
+        "type": "Sub-Agent",
+        "provider": "OpenAI",
+        "model": "gpt-4.1",
+        "knowledge_base": "697acdf6115a3970d17438d3",
+        "managed_by": "697ace4fbc6eb6293f5503f1"
+      },
+      "message_generation_agent": {
+        "agent_id": "697ace27c03792e039e5ada5",
+        "name": "Message Generation Agent",
+        "type": "Sub-Agent",
+        "provider": "OpenAI",
+        "model": "gpt-4.1",
+        "knowledge_base": "697ace15115a3970d17438d4",
+        "managed_by": "697ace4fbc6eb6293f5503f1"
+      }
+    },
+    "independent_agents": {
+      "email_delivery_agent": {
+        "agent_id": "697ace6bc03792e039e5adaa",
+        "name": "Email Delivery Agent",
+        "type": "Independent",
+        "provider": "OpenAI",
+        "model": "gpt-4.1",
+        "tools": ["gmail"]
+      },
+      "linkedin_content_agent": {
+        "agent_id": "697ace8623e56dc88c1ff0c6",
+        "name": "LinkedIn Content Agent",
+        "type": "Independent",
+        "provider": "Perplexity",
+        "model": "sonar-pro",
+        "knowledge_base": "697ace15115a3970d17438d4"
+      },
+      "meeting_scheduler_agent": {
+        "agent_id": "697acea3814f1038c09862d1",
+        "name": "Meeting Scheduler Agent",
+        "type": "Independent",
+        "provider": "OpenAI",
+        "model": "gpt-4.1",
+        "tools": ["calendly"]
+      },
+      "writing_style_analyzer_agent": {
+        "agent_id": "697acec2814f1038c09862d2",
+        "name": "Writing Style Analyzer Agent",
+        "type": "Independent",
+        "provider": "OpenAI",
+        "model": "gpt-4.1",
+        "knowledge_base": "697ace15115a3970d17438d4"
+      }
+    }
+  },
+  "knowledge_bases": {
+    "icp_definitions": {
+      "rag_id": "697acdf6115a3970d17438d3",
+      "rag_name": "icpdefinitionsknowledgebaseru1x",
+      "description": "ICP Definitions, Campaign Briefs, and Qualification Criteria",
+      "used_by": ["697ace07814f1038c09862c6"]
+    },
+    "writing_samples_and_context": {
+      "rag_id": "697ace15115a3970d17438d4",
+      "rag_name": "writingsamplesandcontextknowledgebasefe6x",
+      "description": "Writing Samples, Context Board, Campaign Themes, and Product Documentation",
+      "used_by": [
+        "697ace27c03792e039e5ada5",
+        "697ace8623e56dc88c1ff0c6",
+        "697acec2814f1038c09862d2"
+      ]
+    }
+  },
+  "response_schemas": [
+    "lead_enrichment_agent_response.json",
+    "icp_scoring_agent_response.json",
+    "message_generation_agent_response.json",
+    "lead_processing_coordinator_response.json",
+    "email_delivery_agent_response.json",
+    "linkedin_content_agent_response.json",
+    "meeting_scheduler_agent_response.json",
+    "writing_style_analyzer_agent_response.json"
+  ],
+  "created_at": "2026-01-29T00:00:00Z",
+  "status": "complete"
+}
