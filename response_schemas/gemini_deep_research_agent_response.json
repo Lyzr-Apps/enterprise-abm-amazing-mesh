@@ -1,0 +1,288 @@
+{
+  "agent_name": "Gemini Deep Research Agent",
+  "agent_id": "697ad557814f1038c09862ef",
+  "agent_purpose": "research",
+  "description": "Returns comprehensive market research, competitive analysis, and opportunity assessment with positioning strategies",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "market_insights": {
+        "market_size": {
+          "total_addressable_market": "string",
+          "serviceable_addressable_market": "string",
+          "growth_rate": "string"
+        },
+        "trends": [
+          {
+            "trend": "string",
+            "impact": "string",
+            "timeframe": "string",
+            "description": "string"
+          }
+        ],
+        "opportunities": [
+          {
+            "opportunity": "string",
+            "market_segment": "string",
+            "potential_value": "string",
+            "urgency": "string"
+          }
+        ],
+        "threats": [
+          {
+            "threat": "string",
+            "severity": "string",
+            "mitigation_strategy": "string"
+          }
+        ]
+      },
+      "competitive_analysis": {
+        "competitors": [
+          {
+            "name": "string",
+            "market_share": "string",
+            "strengths": [
+              "string"
+            ],
+            "weaknesses": [
+              "string"
+            ],
+            "positioning": "string"
+          }
+        ],
+        "differentiators": [
+          {
+            "feature": "string",
+            "competitive_advantage": "string",
+            "target_segment": "string"
+          }
+        ],
+        "positioning": {
+          "current": "string",
+          "recommended": "string",
+          "key_messages": [
+            "string"
+          ]
+        }
+      },
+      "opportunity_assessment": {
+        "fit_score": "number",
+        "timing": {
+          "readiness": "string",
+          "best_entry_point": "string",
+          "seasonal_factors": [
+            "string"
+          ]
+        },
+        "entry_strategy": {
+          "approach": "string",
+          "key_actions": [
+            "string"
+          ],
+          "success_metrics": [
+            "string"
+          ],
+          "estimated_timeline": "string"
+        }
+      }
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string",
+      "research_depth": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "market_insights": {
+        "market_size": {
+          "total_addressable_market": "USD 500 billion",
+          "serviceable_addressable_market": "USD 200 billion",
+          "growth_rate": "5% annually"
+        },
+        "trends": [
+          {
+            "trend": "Increase in remote work solutions",
+            "impact": "high",
+            "timeframe": "2023-2025",
+            "description": "The demand for remote work tools is increasing as more companies adopt hybrid working models."
+          }
+        ],
+        "opportunities": [
+          {
+            "opportunity": "Development of integrated software solutions",
+            "market_segment": "SMBs",
+            "potential_value": "USD 50 billion",
+            "urgency": "immediate"
+          }
+        ],
+        "threats": [
+          {
+            "threat": "Intense competition from established players",
+            "severity": "high",
+            "mitigation_strategy": "Focus on niche markets and unique features."
+          }
+        ]
+      },
+      "competitive_analysis": {
+        "competitors": [
+          {
+            "name": "Competitor A",
+            "market_share": "25%",
+            "strengths": [
+              "Strong brand recognition",
+              "Robust features"
+            ],
+            "weaknesses": [
+              "High pricing",
+              "Slow customer support"
+            ],
+            "positioning": "Premium solution for large enterprises."
+          }
+        ],
+        "differentiators": [
+          {
+            "feature": "Customizable user interfaces",
+            "competitive_advantage": "Enhanced user experience tailored to customer needs",
+            "target_segment": "Small to medium businesses"
+          }
+        ],
+        "positioning": {
+          "current": "Affordable, flexible solutions for SMBs",
+          "recommended": "Focus on unique differentiation in usability and support",
+          "key_messages": [
+            "Tailored for your needs",
+            "Affordable pricing"
+          ]
+        }
+      },
+      "opportunity_assessment": {
+        "fit_score": 85,
+        "timing": {
+          "readiness": "ready",
+          "best_entry_point": "Q1 2024",
+          "seasonal_factors": [
+            "Increased demand in January due to new budgets"
+          ]
+        },
+        "entry_strategy": {
+          "approach": "Direct sales and online marketing",
+          "key_actions": [
+            "Launch targeted ad campaigns",
+            "Attend industry expos"
+          ],
+          "success_metrics": [
+            "Customer acquisition rate",
+            "Market penetration",
+            "Sales volume"
+          ],
+          "estimated_timeline": "6 months"
+        }
+      }
+    },
+    "metadata": {
+      "agent_name": "Gemini Deep Research Agent",
+      "timestamp": "2023-10-04T12:00:00Z",
+      "research_depth": "comprehensive"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-29T03:35:12.521002",
+  "test_message_used": "Research a sample topic for testing",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "market_insights": {
+        "market_size": {
+          "total_addressable_market": "USD 500 billion",
+          "serviceable_addressable_market": "USD 200 billion",
+          "growth_rate": "5% annually"
+        },
+        "trends": [
+          {
+            "trend": "Increase in remote work solutions",
+            "impact": "high",
+            "timeframe": "2023-2025",
+            "description": "The demand for remote work tools is increasing as more companies adopt hybrid working models."
+          }
+        ],
+        "opportunities": [
+          {
+            "opportunity": "Development of integrated software solutions",
+            "market_segment": "SMBs",
+            "potential_value": "USD 50 billion",
+            "urgency": "immediate"
+          }
+        ],
+        "threats": [
+          {
+            "threat": "Intense competition from established players",
+            "severity": "high",
+            "mitigation_strategy": "Focus on niche markets and unique features."
+          }
+        ]
+      },
+      "competitive_analysis": {
+        "competitors": [
+          {
+            "name": "Competitor A",
+            "market_share": "25%",
+            "strengths": [
+              "Strong brand recognition",
+              "Robust features"
+            ],
+            "weaknesses": [
+              "High pricing",
+              "Slow customer support"
+            ],
+            "positioning": "Premium solution for large enterprises."
+          }
+        ],
+        "differentiators": [
+          {
+            "feature": "Customizable user interfaces",
+            "competitive_advantage": "Enhanced user experience tailored to customer needs",
+            "target_segment": "Small to medium businesses"
+          }
+        ],
+        "positioning": {
+          "current": "Affordable, flexible solutions for SMBs",
+          "recommended": "Focus on unique differentiation in usability and support",
+          "key_messages": [
+            "Tailored for your needs",
+            "Affordable pricing"
+          ]
+        }
+      },
+      "opportunity_assessment": {
+        "fit_score": 85,
+        "timing": {
+          "readiness": "ready",
+          "best_entry_point": "Q1 2024",
+          "seasonal_factors": [
+            "Increased demand in January due to new budgets"
+          ]
+        },
+        "entry_strategy": {
+          "approach": "Direct sales and online marketing",
+          "key_actions": [
+            "Launch targeted ad campaigns",
+            "Attend industry expos"
+          ],
+          "success_metrics": [
+            "Customer acquisition rate",
+            "Market penetration",
+            "Sales volume"
+          ],
+          "estimated_timeline": "6 months"
+        }
+      }
+    },
+    "metadata": {
+      "agent_name": "Gemini Deep Research Agent",
+      "timestamp": "2023-10-04T12:00:00Z",
+      "research_depth": "comprehensive"
+    }
+  }
+}

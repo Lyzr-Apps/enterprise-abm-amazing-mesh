@@ -1,7 +1,8 @@
 {
   "workflow_name": "Gojberry ABM Automation Platform",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "created_at": "2026-01-29T00:00:00Z",
+  "updated_at": "2026-01-29T12:00:00Z",
   "nodes": [
     {
       "id": "campaign_trigger",
@@ -144,6 +145,167 @@
       "label": "Style Profile",
       "nodeCategory": "end",
       "position": { "x": 700, "y": 750 }
+    },
+    {
+      "id": "clay_enrichment_trigger",
+      "type": "Input",
+      "label": "Enrich with Clay Button",
+      "nodeCategory": "input",
+      "position": { "x": 100, "y": 900 }
+    },
+    {
+      "id": "clay_enrichment_intent_agent",
+      "type": "Agent",
+      "label": "Clay Enrichment & Intent Agent",
+      "nodeCategory": "agent",
+      "agent_id": "697ad49223e56dc88c1ff0f0",
+      "agent_type": "independent",
+      "position": { "x": 400, "y": 900 }
+    },
+    {
+      "id": "clay_enrichment_output",
+      "type": "Output",
+      "label": "Enriched Data with Intent Signals",
+      "nodeCategory": "end",
+      "position": { "x": 700, "y": 900 }
+    },
+    {
+      "id": "instantly_trigger",
+      "type": "Input",
+      "label": "Launch Instantly Campaign Button",
+      "nodeCategory": "input",
+      "position": { "x": 100, "y": 1050 }
+    },
+    {
+      "id": "instantly_email_sender_agent",
+      "type": "Agent",
+      "label": "Instantly Email Sender Agent",
+      "nodeCategory": "agent",
+      "agent_id": "697ad4a9bc6eb6293f55040b",
+      "agent_type": "independent",
+      "position": { "x": 400, "y": 1050 }
+    },
+    {
+      "id": "instantly_campaign_output",
+      "type": "Output",
+      "label": "Instantly Campaign Status",
+      "nodeCategory": "end",
+      "position": { "x": 700, "y": 1050 }
+    },
+    {
+      "id": "linkedin_nav_trigger",
+      "type": "Input",
+      "label": "Search LinkedIn Button",
+      "nodeCategory": "input",
+      "position": { "x": 100, "y": 1200 }
+    },
+    {
+      "id": "linkedin_sales_navigator_agent",
+      "type": "Agent",
+      "label": "LinkedIn Sales Navigator Agent",
+      "nodeCategory": "agent",
+      "agent_id": "697ad4c2c03792e039e5add8",
+      "agent_type": "independent",
+      "position": { "x": 400, "y": 1200 }
+    },
+    {
+      "id": "linkedin_nav_output",
+      "type": "Output",
+      "label": "LinkedIn Prospect Data",
+      "nodeCategory": "end",
+      "position": { "x": 700, "y": 1200 }
+    },
+    {
+      "id": "genspark_trigger",
+      "type": "Input",
+      "label": "Research Account Button",
+      "nodeCategory": "input",
+      "position": { "x": 100, "y": 1350 }
+    },
+    {
+      "id": "genspark_research_agent",
+      "type": "Agent",
+      "label": "Genspark Research Agent",
+      "nodeCategory": "agent",
+      "agent_id": "697ad4ddbc6eb6293f55040f",
+      "agent_type": "independent",
+      "position": { "x": 400, "y": 1350 }
+    },
+    {
+      "id": "genspark_output",
+      "type": "Output",
+      "label": "Account Intelligence Report",
+      "nodeCategory": "end",
+      "position": { "x": 700, "y": 1350 }
+    },
+    {
+      "id": "claude_cowork_trigger",
+      "type": "Input",
+      "label": "Strategic Analysis Button",
+      "nodeCategory": "input",
+      "position": { "x": 100, "y": 1500 }
+    },
+    {
+      "id": "claude_cowork_agent",
+      "type": "Agent",
+      "label": "Claude Co-work Agent",
+      "nodeCategory": "agent",
+      "agent_id": "697ad52bbc6eb6293f550413",
+      "agent_type": "independent",
+      "position": { "x": 400, "y": 1500 }
+    },
+    {
+      "id": "claude_cowork_output",
+      "type": "Output",
+      "label": "Strategic Deal Plan",
+      "nodeCategory": "end",
+      "position": { "x": 700, "y": 1500 }
+    },
+    {
+      "id": "gemini_research_trigger",
+      "type": "Input",
+      "label": "Market Research Button",
+      "nodeCategory": "input",
+      "position": { "x": 100, "y": 1650 }
+    },
+    {
+      "id": "gemini_deep_research_agent",
+      "type": "Agent",
+      "label": "Gemini Deep Research Agent",
+      "nodeCategory": "agent",
+      "agent_id": "697ad557814f1038c09862ef",
+      "agent_type": "independent",
+      "position": { "x": 400, "y": 1650 }
+    },
+    {
+      "id": "gemini_research_output",
+      "type": "Output",
+      "label": "Market Intelligence Report",
+      "nodeCategory": "end",
+      "position": { "x": 700, "y": 1650 }
+    },
+    {
+      "id": "multichannel_trigger",
+      "type": "Input",
+      "label": "Launch Multi-Channel Campaign",
+      "nodeCategory": "input",
+      "position": { "x": 100, "y": 1800 }
+    },
+    {
+      "id": "multi_channel_orchestrator",
+      "type": "Agent",
+      "label": "Multi-Channel Orchestrator",
+      "nodeCategory": "agent",
+      "agent_id": "697ad587bc6eb6293f550417",
+      "agent_type": "manager",
+      "position": { "x": 400, "y": 1800 }
+    },
+    {
+      "id": "multichannel_output",
+      "type": "Output",
+      "label": "Campaign Orchestration Plan",
+      "nodeCategory": "end",
+      "position": { "x": 700, "y": 1800 }
     }
   ],
   "edges": [
@@ -159,7 +321,21 @@
     { "source": "meeting_trigger", "target": "meeting_scheduler_agent" },
     { "source": "meeting_scheduler_agent", "target": "meeting_confirmation_output" },
     { "source": "style_analysis_trigger", "target": "writing_style_analyzer_agent" },
-    { "source": "writing_style_analyzer_agent", "target": "style_profile_output" }
+    { "source": "writing_style_analyzer_agent", "target": "style_profile_output" },
+    { "source": "clay_enrichment_trigger", "target": "clay_enrichment_intent_agent" },
+    { "source": "clay_enrichment_intent_agent", "target": "clay_enrichment_output" },
+    { "source": "instantly_trigger", "target": "instantly_email_sender_agent" },
+    { "source": "instantly_email_sender_agent", "target": "instantly_campaign_output" },
+    { "source": "linkedin_nav_trigger", "target": "linkedin_sales_navigator_agent" },
+    { "source": "linkedin_sales_navigator_agent", "target": "linkedin_nav_output" },
+    { "source": "genspark_trigger", "target": "genspark_research_agent" },
+    { "source": "genspark_research_agent", "target": "genspark_output" },
+    { "source": "claude_cowork_trigger", "target": "claude_cowork_agent" },
+    { "source": "claude_cowork_agent", "target": "claude_cowork_output" },
+    { "source": "gemini_research_trigger", "target": "gemini_deep_research_agent" },
+    { "source": "gemini_deep_research_agent", "target": "gemini_research_output" },
+    { "source": "multichannel_trigger", "target": "multi_channel_orchestrator" },
+    { "source": "multi_channel_orchestrator", "target": "multichannel_output" }
   ],
   "agents": {
     "697ace4fbc6eb6293f5503f1": {
@@ -256,6 +432,84 @@
       "top_p": 1,
       "trigger": "Analyze Style on Team Settings",
       "knowledge_base": "697ace15115a3970d17438d4"
+    },
+    "697ad49223e56dc88c1ff0f0": {
+      "name": "Clay Enrichment & Intent Agent",
+      "type": "Independent",
+      "description": "Enriches prospect data using Clay and detects intent signals from digital footprints",
+      "provider": "OpenAI",
+      "model": "gpt-4.1",
+      "temperature": 0.3,
+      "top_p": 1,
+      "trigger": "Enrich with Clay Button",
+      "tools": ["Clay API"]
+    },
+    "697ad4a9bc6eb6293f55040b": {
+      "name": "Instantly Email Sender Agent",
+      "type": "Independent",
+      "description": "Sends cold email sequences via Instantly.ai with deliverability optimization",
+      "provider": "OpenAI",
+      "model": "gpt-4.1",
+      "temperature": 0.2,
+      "top_p": 1,
+      "trigger": "Launch Instantly Campaign Button",
+      "tools": ["Instantly API"]
+    },
+    "697ad4c2c03792e039e5add8": {
+      "name": "LinkedIn Sales Navigator Agent",
+      "type": "Independent",
+      "description": "Searches LinkedIn Sales Navigator for prospects and tracks engagement",
+      "provider": "OpenAI",
+      "model": "gpt-4.1",
+      "temperature": 0.3,
+      "top_p": 1,
+      "trigger": "Search LinkedIn Button",
+      "tools": ["LinkedIn Sales Navigator"]
+    },
+    "697ad4ddbc6eb6293f55040f": {
+      "name": "Genspark Research Agent",
+      "type": "Independent",
+      "description": "Uses Genspark AI to research accounts and generate competitive intelligence",
+      "provider": "Perplexity",
+      "model": "sonar-pro",
+      "temperature": 0.5,
+      "top_p": 0.95,
+      "trigger": "Research Account Button"
+    },
+    "697ad52bbc6eb6293f550413": {
+      "name": "Claude Co-work Agent",
+      "type": "Independent",
+      "description": "Leverages advanced reasoning for complex account analysis and deal strategy",
+      "provider": "OpenAI",
+      "model": "gpt-4.1",
+      "temperature": 0.6,
+      "top_p": 0.9,
+      "trigger": "Strategic Analysis Button"
+    },
+    "697ad557814f1038c09862ef": {
+      "name": "Gemini Deep Research Agent",
+      "type": "Independent",
+      "description": "Uses Gemini for comprehensive market analysis and competitive positioning",
+      "provider": "Google",
+      "model": "gemini-2.0-flash-exp",
+      "temperature": 0.5,
+      "top_p": 0.95,
+      "trigger": "Market Research Button"
+    },
+    "697ad587bc6eb6293f550417": {
+      "name": "Multi-Channel Orchestrator",
+      "type": "Manager",
+      "description": "Coordinates outreach across email (Gmail + Instantly) and LinkedIn channels",
+      "provider": "OpenAI",
+      "model": "gpt-4.1",
+      "temperature": 0.4,
+      "top_p": 1,
+      "trigger": "Launch Multi-Channel Campaign",
+      "manages": [
+        "697ace6bc03792e039e5adaa",
+        "697ad4a9bc6eb6293f55040b",
+        "697ad4c2c03792e039e5add8"
+      ]
     }
   },
   "knowledge_bases": {

@@ -1,0 +1,180 @@
+{
+  "agent_name": "Multi-Channel Orchestrator",
+  "agent_id": "697ad587bc6eb6293f550417",
+  "agent_purpose": "manager",
+  "description": "Returns multi-channel outreach orchestration plan with engagement analytics and next action recommendations",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "outreach_plan": {
+        "sequence_id": "string",
+        "channels": [
+          {
+            "channel": "string",
+            "message": "string",
+            "timing": "string",
+            "priority": "number"
+          }
+        ],
+        "cadence": {
+          "total_touchpoints": "string",
+          "duration_days": "string",
+          "frequency": "string"
+        }
+      },
+      "engagement_summary": {
+        "total_sent": "number",
+        "opened": "number",
+        "clicked": "number",
+        "replied": "number",
+        "engagement_rate": "number",
+        "best_performing_channel": "string",
+        "engagement_trend": "string"
+      },
+      "next_actions": [
+        {
+          "action_type": "string",
+          "channel": "string",
+          "timing": "string",
+          "reason": "string",
+          "message_template": "string"
+        }
+      ],
+      "channel_switching_recommendation": {
+        "switch_recommended": "boolean",
+        "from_channel": "string",
+        "to_channel": "string",
+        "reason": "string"
+      }
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "outreach_plan": {
+        "sequence_id": "seq-001",
+        "channels": [
+          {
+            "channel": "gmail",
+            "message": "Subject: Excited to Connect!\n\nHi {FirstName},\n\nI came across your profile and was impressed by your accomplishments at {Company}. I\u2019d love to connect and explore potential synergies. Are you open to a brief conversation this week?\n\nBest regards,\n[Your Name]",
+            "timing": "2024-06-13T14:00:00Z",
+            "priority": 8
+          },
+          {
+            "channel": "instantly",
+            "message": "Subject: Exploring Collaboration Opportunities\n\nHello {FirstName},\n\nI hope this message finds you well! I wanted to introduce myself and see if there might be a fit to collaborate between our companies. Would you be available for a quick call next week?\n\nBest,\n[Your Name]",
+            "timing": "2024-06-14T14:00:00Z",
+            "priority": 7
+          },
+          {
+            "channel": "linkedin",
+            "message": "Hi {FirstName}, I\u2019m reaching out after seeing your profile\u2014your recent work at {Company} caught my eye! I\u2019d enjoy connecting and discussing how we can help each other. Let\u2019s chat!",
+            "timing": "2024-06-17T15:00:00Z",
+            "priority": 6
+          }
+        ],
+        "cadence": {
+          "total_touchpoints": "3",
+          "duration_days": "7",
+          "frequency": "Every 2-3 days across channels"
+        }
+      },
+      "engagement_summary": {
+        "total_sent": 0,
+        "opened": 0,
+        "clicked": 0,
+        "replied": 0,
+        "engagement_rate": 0,
+        "best_performing_channel": "gmail",
+        "engagement_trend": "stable"
+      },
+      "next_actions": [
+        {
+          "action_type": "wait",
+          "channel": "none",
+          "timing": "2024-06-13T18:00:00Z",
+          "reason": "Awaiting recipient data, sender info, and campaign parameters to initiate first email.",
+          "message_template": "Subject: Excited to Connect!\n\nHi {FirstName},\n\nI came across your profile and was impressed by your accomplishments at {Company}. I\u2019d love to connect and explore potential synergies. Are you open to a brief conversation this week?\n\nBest regards,\n[Your Name]"
+        }
+      ],
+      "channel_switching_recommendation": {
+        "switch_recommended": false,
+        "from_channel": "gmail",
+        "to_channel": "linkedin",
+        "reason": "No engagement data/applicable context yet. Awaiting outreach results."
+      }
+    },
+    "metadata": {
+      "agent_name": "Multi-Channel Orchestrator",
+      "timestamp": "2024-06-13T12:09:45Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-29T03:36:09.079334",
+  "test_message_used": "Process this request and coordinate sub-agents",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "outreach_plan": {
+        "sequence_id": "seq-001",
+        "channels": [
+          {
+            "channel": "gmail",
+            "message": "Subject: Excited to Connect!\n\nHi {FirstName},\n\nI came across your profile and was impressed by your accomplishments at {Company}. I\u2019d love to connect and explore potential synergies. Are you open to a brief conversation this week?\n\nBest regards,\n[Your Name]",
+            "timing": "2024-06-13T14:00:00Z",
+            "priority": 8
+          },
+          {
+            "channel": "instantly",
+            "message": "Subject: Exploring Collaboration Opportunities\n\nHello {FirstName},\n\nI hope this message finds you well! I wanted to introduce myself and see if there might be a fit to collaborate between our companies. Would you be available for a quick call next week?\n\nBest,\n[Your Name]",
+            "timing": "2024-06-14T14:00:00Z",
+            "priority": 7
+          },
+          {
+            "channel": "linkedin",
+            "message": "Hi {FirstName}, I\u2019m reaching out after seeing your profile\u2014your recent work at {Company} caught my eye! I\u2019d enjoy connecting and discussing how we can help each other. Let\u2019s chat!",
+            "timing": "2024-06-17T15:00:00Z",
+            "priority": 6
+          }
+        ],
+        "cadence": {
+          "total_touchpoints": "3",
+          "duration_days": "7",
+          "frequency": "Every 2-3 days across channels"
+        }
+      },
+      "engagement_summary": {
+        "total_sent": 0,
+        "opened": 0,
+        "clicked": 0,
+        "replied": 0,
+        "engagement_rate": 0,
+        "best_performing_channel": "gmail",
+        "engagement_trend": "stable"
+      },
+      "next_actions": [
+        {
+          "action_type": "wait",
+          "channel": "none",
+          "timing": "2024-06-13T18:00:00Z",
+          "reason": "Awaiting recipient data, sender info, and campaign parameters to initiate first email.",
+          "message_template": "Subject: Excited to Connect!\n\nHi {FirstName},\n\nI came across your profile and was impressed by your accomplishments at {Company}. I\u2019d love to connect and explore potential synergies. Are you open to a brief conversation this week?\n\nBest regards,\n[Your Name]"
+        }
+      ],
+      "channel_switching_recommendation": {
+        "switch_recommended": false,
+        "from_channel": "gmail",
+        "to_channel": "linkedin",
+        "reason": "No engagement data/applicable context yet. Awaiting outreach results."
+      }
+    },
+    "metadata": {
+      "agent_name": "Multi-Channel Orchestrator",
+      "timestamp": "2024-06-13T12:09:45Z"
+    }
+  }
+}

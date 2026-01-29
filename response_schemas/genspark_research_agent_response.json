@@ -1,0 +1,227 @@
+{
+  "agent_name": "Genspark Research Agent",
+  "agent_id": "697ad4ddbc6eb6293f55040f",
+  "agent_purpose": "research",
+  "description": "Returns comprehensive account research with competitive intelligence and personalized outreach insights",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "company_overview": {
+        "name": "string",
+        "description": "string",
+        "industry": "string",
+        "size": "string",
+        "revenue_range": "string",
+        "business_model": "string",
+        "key_products": [
+          "string"
+        ]
+      },
+      "competitive_landscape": {
+        "main_competitors": [
+          "string"
+        ],
+        "competitive_advantages": [
+          "string"
+        ],
+        "market_position": "string",
+        "differentiation_factors": [
+          "string"
+        ]
+      },
+      "recent_developments": [
+        {
+          "type": "string",
+          "title": "string",
+          "date": "string",
+          "description": "string",
+          "impact": "string"
+        }
+      ],
+      "pain_points": [
+        {
+          "category": "string",
+          "description": "string",
+          "severity": "string",
+          "evidence": "string"
+        }
+      ],
+      "outreach_angles": [
+        {
+          "angle": "string",
+          "relevance_score": "number",
+          "talking_points": [
+            "string"
+          ]
+        }
+      ],
+      "personalization_hooks": [
+        {
+          "hook_type": "string",
+          "content": "string",
+          "usage_suggestion": "string"
+        }
+      ]
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string",
+      "sources_analyzed": "number"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "company_overview": {
+        "name": "Test Company Inc.",
+        "description": "A leading provider of innovative technology solutions for various industries.",
+        "industry": "Technology",
+        "size": "Mid-sized",
+        "revenue_range": "$10M - $50M",
+        "business_model": "B2B",
+        "key_products": [
+          "Software Solutions",
+          "Consulting Services",
+          "Cloud Services"
+        ]
+      },
+      "competitive_landscape": {
+        "main_competitors": [
+          "Tech Innovations Corp.",
+          "Global Tech Solutions",
+          "FutureTech LLC"
+        ],
+        "competitive_advantages": [
+          "Strong R&D capabilities",
+          "Customer-centric approach",
+          "Agile service delivery"
+        ],
+        "market_position": "Emerging leader in technology solutions",
+        "differentiation_factors": [
+          "Customized solutions",
+          "Expert team",
+          "Comprehensive support"
+        ]
+      },
+      "recent_developments": [
+        {
+          "type": "funding",
+          "title": "Series B Funding Round Closed",
+          "date": "2023-10-01",
+          "description": "Successfully closed a $15 million Series B funding round to expand operations.",
+          "impact": "high"
+        }
+      ],
+      "pain_points": [
+        {
+          "category": "operational",
+          "description": "Inefficient internal communication processes leading to project delays.",
+          "severity": "critical",
+          "evidence": "Several projects have reported delays over the past quarter due to poor communication."
+        }
+      ],
+      "outreach_angles": [
+        {
+          "angle": "How our solution enhances communication and project management.",
+          "relevance_score": 85,
+          "talking_points": [
+            "Streamlined communication tools",
+            "Project tracking features",
+            "Improved team collaboration"
+          ]
+        }
+      ],
+      "personalization_hooks": [
+        {
+          "hook_type": "industry_trend",
+          "content": "The increasing shift toward remote work has highlighted the need for better communication tools.",
+          "usage_suggestion": "Mention the trend in outreach to discuss how our solutions can help."
+        }
+      ]
+    },
+    "metadata": {
+      "agent_name": "Genspark Research Agent",
+      "timestamp": "2023-10-05T12:00:00Z",
+      "sources_analyzed": 5
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-29T03:33:00.835930",
+  "test_message_used": "Research a sample topic for testing",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "company_overview": {
+        "name": "Test Company Inc.",
+        "description": "A leading provider of innovative technology solutions for various industries.",
+        "industry": "Technology",
+        "size": "Mid-sized",
+        "revenue_range": "$10M - $50M",
+        "business_model": "B2B",
+        "key_products": [
+          "Software Solutions",
+          "Consulting Services",
+          "Cloud Services"
+        ]
+      },
+      "competitive_landscape": {
+        "main_competitors": [
+          "Tech Innovations Corp.",
+          "Global Tech Solutions",
+          "FutureTech LLC"
+        ],
+        "competitive_advantages": [
+          "Strong R&D capabilities",
+          "Customer-centric approach",
+          "Agile service delivery"
+        ],
+        "market_position": "Emerging leader in technology solutions",
+        "differentiation_factors": [
+          "Customized solutions",
+          "Expert team",
+          "Comprehensive support"
+        ]
+      },
+      "recent_developments": [
+        {
+          "type": "funding",
+          "title": "Series B Funding Round Closed",
+          "date": "2023-10-01",
+          "description": "Successfully closed a $15 million Series B funding round to expand operations.",
+          "impact": "high"
+        }
+      ],
+      "pain_points": [
+        {
+          "category": "operational",
+          "description": "Inefficient internal communication processes leading to project delays.",
+          "severity": "critical",
+          "evidence": "Several projects have reported delays over the past quarter due to poor communication."
+        }
+      ],
+      "outreach_angles": [
+        {
+          "angle": "How our solution enhances communication and project management.",
+          "relevance_score": 85,
+          "talking_points": [
+            "Streamlined communication tools",
+            "Project tracking features",
+            "Improved team collaboration"
+          ]
+        }
+      ],
+      "personalization_hooks": [
+        {
+          "hook_type": "industry_trend",
+          "content": "The increasing shift toward remote work has highlighted the need for better communication tools.",
+          "usage_suggestion": "Mention the trend in outreach to discuss how our solutions can help."
+        }
+      ]
+    },
+    "metadata": {
+      "agent_name": "Genspark Research Agent",
+      "timestamp": "2023-10-05T12:00:00Z",
+      "sources_analyzed": 5
+    }
+  }
+}

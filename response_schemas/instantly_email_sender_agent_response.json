@@ -1,0 +1,96 @@
+{
+  "agent_name": "Instantly Email Sender Agent",
+  "agent_id": "697ad4a9bc6eb6293f55040b",
+  "agent_purpose": "custom",
+  "description": "Returns email campaign status and deliverability metrics from Instantly.ai",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "campaign_id": "string",
+      "email_status": "string",
+      "deliverability_score": "number",
+      "tracking": {
+        "opened": "boolean",
+        "open_count": "number",
+        "clicked": "boolean",
+        "click_count": "number",
+        "replied": "boolean",
+        "reply_count": "number"
+      },
+      "sequence_position": "number",
+      "next_followup": "string",
+      "warmup_status": {
+        "warmup_active": "boolean",
+        "warmup_stage": "string",
+        "daily_limit": "number",
+        "emails_sent_today": "number"
+      },
+      "ab_test_variant": "null"
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "campaign_id": "camp_123456789",
+      "email_status": "sent",
+      "deliverability_score": 98,
+      "tracking": {
+        "opened": true,
+        "open_count": 2,
+        "clicked": false,
+        "click_count": 0,
+        "replied": false,
+        "reply_count": 0
+      },
+      "sequence_position": 1,
+      "next_followup": "2024-06-11T15:00:00Z",
+      "warmup_status": {
+        "warmup_active": true,
+        "warmup_stage": "gradual increase",
+        "daily_limit": 50,
+        "emails_sent_today": 25
+      },
+      "ab_test_variant": null
+    },
+    "metadata": {
+      "agent_name": "Instantly Email Sender Agent",
+      "timestamp": "2024-06-10T18:30:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-29T03:32:03.097591",
+  "test_message_used": "Provide a sample response",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "campaign_id": "camp_123456789",
+      "email_status": "sent",
+      "deliverability_score": 98,
+      "tracking": {
+        "opened": true,
+        "open_count": 2,
+        "clicked": false,
+        "click_count": 0,
+        "replied": false,
+        "reply_count": 0
+      },
+      "sequence_position": 1,
+      "next_followup": "2024-06-11T15:00:00Z",
+      "warmup_status": {
+        "warmup_active": true,
+        "warmup_stage": "gradual increase",
+        "daily_limit": 50,
+        "emails_sent_today": 25
+      },
+      "ab_test_variant": null
+    },
+    "metadata": {
+      "agent_name": "Instantly Email Sender Agent",
+      "timestamp": "2024-06-10T18:30:00Z"
+    }
+  }
+}

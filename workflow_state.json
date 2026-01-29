@@ -1,10 +1,10 @@
 {
   "workflow_created": true,
   "agents_created": true,
-  "total_agents": 8,
-  "manager_agents": 1,
+  "total_agents": 15,
+  "manager_agents": 2,
   "sub_agents": 3,
-  "independent_agents": 4,
+  "independent_agents": 10,
   "knowledge_bases": 2,
   "agents": {
     "manager": {
@@ -18,6 +18,18 @@
           "697acded814f1038c09862c5",
           "697ace07814f1038c09862c6",
           "697ace27c03792e039e5ada5"
+        ]
+      },
+      "multi_channel_orchestrator": {
+        "agent_id": "697ad587bc6eb6293f550417",
+        "name": "Multi-Channel Orchestrator",
+        "type": "Manager",
+        "provider": "OpenAI",
+        "model": "gpt-4.1",
+        "manages": [
+          "697ace6bc03792e039e5adaa",
+          "697ad4a9bc6eb6293f55040b",
+          "697ad4c2c03792e039e5add8"
         ]
       }
     },
@@ -82,6 +94,51 @@
         "provider": "OpenAI",
         "model": "gpt-4.1",
         "knowledge_base": "697ace15115a3970d17438d4"
+      },
+      "clay_enrichment_intent_agent": {
+        "agent_id": "697ad49223e56dc88c1ff0f0",
+        "name": "Clay Enrichment & Intent Agent",
+        "type": "Independent",
+        "provider": "OpenAI",
+        "model": "gpt-4.1",
+        "tools": ["clay"]
+      },
+      "instantly_email_sender_agent": {
+        "agent_id": "697ad4a9bc6eb6293f55040b",
+        "name": "Instantly Email Sender Agent",
+        "type": "Independent",
+        "provider": "OpenAI",
+        "model": "gpt-4.1",
+        "tools": ["instantly"]
+      },
+      "linkedin_sales_navigator_agent": {
+        "agent_id": "697ad4c2c03792e039e5add8",
+        "name": "LinkedIn Sales Navigator Agent",
+        "type": "Independent",
+        "provider": "OpenAI",
+        "model": "gpt-4.1",
+        "tools": ["linkedin"]
+      },
+      "genspark_research_agent": {
+        "agent_id": "697ad4ddbc6eb6293f55040f",
+        "name": "Genspark Research Agent",
+        "type": "Independent",
+        "provider": "Perplexity",
+        "model": "sonar-pro"
+      },
+      "claude_cowork_agent": {
+        "agent_id": "697ad52bbc6eb6293f550413",
+        "name": "Claude Co-work Agent",
+        "type": "Independent",
+        "provider": "OpenAI",
+        "model": "gpt-4.1"
+      },
+      "gemini_deep_research_agent": {
+        "agent_id": "697ad557814f1038c09862ef",
+        "name": "Gemini Deep Research Agent",
+        "type": "Independent",
+        "provider": "Google",
+        "model": "gemini-2.0-flash-exp"
       }
     }
   },
@@ -111,8 +168,16 @@
     "email_delivery_agent_response.json",
     "linkedin_content_agent_response.json",
     "meeting_scheduler_agent_response.json",
-    "writing_style_analyzer_agent_response.json"
+    "writing_style_analyzer_agent_response.json",
+    "clay_enrichment_intent_agent_response.json",
+    "instantly_email_sender_agent_response.json",
+    "linkedin_sales_navigator_agent_response.json",
+    "genspark_research_agent_response.json",
+    "claude_co_work_agent_response.json",
+    "gemini_deep_research_agent_response.json",
+    "multi_channel_orchestrator_response.json"
   ],
   "created_at": "2026-01-29T00:00:00Z",
+  "updated_at": "2026-01-29T12:00:00Z",
   "status": "complete"
 }

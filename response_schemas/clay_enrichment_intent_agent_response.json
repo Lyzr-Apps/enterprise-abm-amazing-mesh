@@ -1,0 +1,54 @@
+{
+  "agent_name": "Clay Enrichment & Intent Agent",
+  "agent_id": "697ad49223e56dc88c1ff0f0",
+  "agent_purpose": "analyzer",
+  "description": "Returns enriched prospect data and detected intent signals from Clay analysis",
+  "response_schema": {
+    "status": "string (success|error)",
+    "result": {
+      "analysis": "string",
+      "findings": [
+        {
+          "title": "string",
+          "description": "string",
+          "severity": "string (low|medium|high)"
+        }
+      ],
+      "score": "number (optional, 0-100)",
+      "recommendations": [
+        "string"
+      ]
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string (ISO)"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "analysis": "Comprehensive analysis of the provided data",
+      "findings": [
+        {
+          "title": "Key Finding 1",
+          "description": "Important observation",
+          "severity": "high"
+        }
+      ],
+      "score": 85,
+      "recommendations": [
+        "Consider optimizing X",
+        "Review Y for improvements"
+      ]
+    },
+    "metadata": {
+      "agent_name": "Clay Enrichment & Intent Agent",
+      "timestamp": "2025-01-15T10:30:00Z"
+    }
+  },
+  "is_actual_tested": false,
+  "test_timestamp": null,
+  "test_message_used": "Analyze this sample data for testing",
+  "raw_test_response": "Please provide the specific details or dataset you want analyzed. I need either a sample record, company/contact, or a structured data input to perform enrichment and intent signal detection. Could you upload or paste the relevant data?",
+  "test_error": "Response not valid JSON: Expecting value: line 1 column 1 (char 0)"
+}

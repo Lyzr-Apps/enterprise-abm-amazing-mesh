@@ -1,0 +1,497 @@
+{
+  "agent_name": "Claude Co-work Agent",
+  "agent_id": "697ad52bbc6eb6293f550413",
+  "agent_purpose": "custom",
+  "description": "Returns strategic account analysis with stakeholder mapping, objection handling framework, and deal progression timeline",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "account_strategy": {
+        "approach": "string",
+        "key_stakeholders": [
+          {
+            "name": "string",
+            "role": "string",
+            "influence_level": "string",
+            "engagement_priority": "number",
+            "recommended_messaging": "string"
+          }
+        ],
+        "engagement_plan": {
+          "phases": [
+            {
+              "phase_number": "number",
+              "phase_name": "string",
+              "objectives": [
+                "string"
+              ],
+              "activities": [
+                "string"
+              ],
+              "success_criteria": [
+                "string"
+              ],
+              "estimated_duration": "string"
+            }
+          ],
+          "critical_path": [
+            "string"
+          ]
+        }
+      },
+      "objection_handling": {
+        "anticipated_objections": [
+          {
+            "objection": "string",
+            "likelihood": "string",
+            "category": "string",
+            "response": "string",
+            "supporting_evidence": [
+              "string"
+            ]
+          }
+        ]
+      },
+      "deal_progression": {
+        "current_stage": "string",
+        "next_steps": [
+          {
+            "action": "string",
+            "owner": "string",
+            "deadline": "string",
+            "dependencies": [
+              "string"
+            ]
+          }
+        ],
+        "timeline": {
+          "estimated_close_date": "string",
+          "confidence_level": "number"
+        },
+        "risk_factors": [
+          {
+            "risk": "string",
+            "severity": "string",
+            "mitigation": "string"
+          }
+        ]
+      }
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string",
+      "reasoning_depth": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "account_strategy": {
+        "approach": "Adopt a consultative, value-based approach targeting both executive sponsors and operational stakeholders, with a focus on mapping solution value to explicit business pain points and demonstrating ROI compared to incumbent technologies.",
+        "key_stakeholders": [
+          {
+            "name": "Jane Doe",
+            "role": "CIO",
+            "influence_level": "high",
+            "engagement_priority": 10,
+            "recommended_messaging": "Highlight strategic alignment with digital transformation initiatives and measurable impact on IT efficiency and cost reduction."
+          },
+          {
+            "name": "Mark Smith",
+            "role": "Procurement Lead",
+            "influence_level": "medium",
+            "engagement_priority": 6,
+            "recommended_messaging": "Emphasize competitive pricing, transparent TCO, and streamlined contract terms compared to alternatives."
+          },
+          {
+            "name": "Emma Turner",
+            "role": "Head of Operations",
+            "influence_level": "high",
+            "engagement_priority": 9,
+            "recommended_messaging": "Showcase operational improvements, risk mitigation, and how the offering can simplify current workflows."
+          }
+        ],
+        "engagement_plan": {
+          "phases": [
+            {
+              "phase_number": 1,
+              "phase_name": "Stakeholder Discovery & Alignment",
+              "objectives": [
+                "Identify all key stakeholders and map their priorities",
+                "Establish solution alignment with business objectives"
+              ],
+              "activities": [
+                "Conduct discovery workshops",
+                "Develop stakeholder matrix",
+                "Share initial value proposition deck"
+              ],
+              "success_criteria": [
+                "Stakeholder map completed",
+                "Validated business objectives with sponsor"
+              ],
+              "estimated_duration": "2 weeks"
+            },
+            {
+              "phase_number": 2,
+              "phase_name": "Solution Validation & Proof",
+              "objectives": [
+                "Demonstrate technical and business-fit through pilot",
+                "Gather measurable results to build business case"
+              ],
+              "activities": [
+                "Run PoC or pilot",
+                "Document outcomes and user feedback"
+              ],
+              "success_criteria": [
+                "Pilot success metrics achieved",
+                "User testimonials obtained"
+              ],
+              "estimated_duration": "4 weeks"
+            },
+            {
+              "phase_number": 3,
+              "phase_name": "Commercial Negotiation & Close",
+              "objectives": [
+                "Address procurement and legal concerns",
+                "Reach consensus on pricing and terms",
+                "Secure executive sign-off"
+              ],
+              "activities": [
+                "Facilitate procurement and legal reviews",
+                "Negotiate pricing and contract terms",
+                "Present final proposal to steering committee"
+              ],
+              "success_criteria": [
+                "Contract signed",
+                "Internal announcement of partnership"
+              ],
+              "estimated_duration": "3 weeks"
+            }
+          ],
+          "critical_path": [
+            "Stakeholder alignment",
+            "Pilot/Poc success",
+            "Procurement approval",
+            "Executive sponsorship"
+          ]
+        }
+      },
+      "objection_handling": {
+        "anticipated_objections": [
+          {
+            "objection": "The solution is more expensive than current provider.",
+            "likelihood": "high",
+            "category": "price",
+            "response": "Demonstrate lower total cost of ownership and quantify efficiency gains to justify premium.",
+            "supporting_evidence": [
+              "ROI case studies from similar clients",
+              "TCO comparison spreadsheets"
+            ]
+          },
+          {
+            "objection": "Implementation timeline does not align with our internal deadlines.",
+            "likelihood": "medium",
+            "category": "timing",
+            "response": "Offer a phased deployment and dedicated onboarding resources to accelerate time-to-value.",
+            "supporting_evidence": [
+              "Previous phased rollout examples",
+              "Customer references on onboarding speed"
+            ]
+          },
+          {
+            "objection": "We are considering a competitor with a longer track record in our industry.",
+            "likelihood": "medium",
+            "category": "competition",
+            "response": "Focus on unique differentiation (e.g., advanced features, support), and bring forward references from similar industries.",
+            "supporting_evidence": [
+              "Gartner/Forrester analyst reports",
+              "Industry peer customer testimonials"
+            ]
+          },
+          {
+            "objection": "Other projects currently have higher internal priority.",
+            "likelihood": "medium",
+            "category": "internal_priority",
+            "response": "Reposition the solution as an enabler for existing priorities or a quick-win to secure early value.",
+            "supporting_evidence": [
+              "Case study on accelerated business impact",
+              "Linkage to ongoing transformation initiatives"
+            ]
+          },
+          {
+            "objection": "Integration with legacy systems is a concern.",
+            "likelihood": "low",
+            "category": "technical",
+            "response": "Provide detailed integration guides and success stories along with dedicated technical support.",
+            "supporting_evidence": [
+              "Technical architecture documentation",
+              "Integration reference implementations"
+            ]
+          }
+        ]
+      },
+      "deal_progression": {
+        "current_stage": "Solution Validation & Proof",
+        "next_steps": [
+          {
+            "action": "Schedule and kick off pilot engagement",
+            "owner": "Account Executive",
+            "deadline": "2024-07-12",
+            "dependencies": [
+              "Completion of stakeholder alignment"
+            ]
+          },
+          {
+            "action": "Collect and analyze pilot feedback",
+            "owner": "Customer Success Manager",
+            "deadline": "2024-08-02",
+            "dependencies": [
+              "Pilot completion"
+            ]
+          },
+          {
+            "action": "Prepare business value assessment and final proposal",
+            "owner": "Account Executive",
+            "deadline": "2024-08-07",
+            "dependencies": [
+              "Pilot feedback consolidated"
+            ]
+          }
+        ],
+        "timeline": {
+          "estimated_close_date": "2024-08-23",
+          "confidence_level": 75
+        },
+        "risk_factors": [
+          {
+            "risk": "Delayed stakeholder buy-in from operations team",
+            "severity": "medium",
+            "mitigation": "Increase executive engagement and facilitate additional workshops as needed"
+          },
+          {
+            "risk": "Procurement cycle takes longer than anticipated",
+            "severity": "medium",
+            "mitigation": "Begin legal/procurement process early and maintain regular follow-ups"
+          },
+          {
+            "risk": "Negative pilot result or technical blocker identified",
+            "severity": "high",
+            "mitigation": "Assign technical specialist to pilot and prepare contingency plan with alternative configurations"
+          }
+        ]
+      }
+    },
+    "metadata": {
+      "agent_name": "Claude Co-work Agent",
+      "timestamp": "2024-06-19T16:30:00Z",
+      "reasoning_depth": "extended"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-29T03:34:30.263855",
+  "test_message_used": "Provide a sample response",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "account_strategy": {
+        "approach": "Adopt a consultative, value-based approach targeting both executive sponsors and operational stakeholders, with a focus on mapping solution value to explicit business pain points and demonstrating ROI compared to incumbent technologies.",
+        "key_stakeholders": [
+          {
+            "name": "Jane Doe",
+            "role": "CIO",
+            "influence_level": "high",
+            "engagement_priority": 10,
+            "recommended_messaging": "Highlight strategic alignment with digital transformation initiatives and measurable impact on IT efficiency and cost reduction."
+          },
+          {
+            "name": "Mark Smith",
+            "role": "Procurement Lead",
+            "influence_level": "medium",
+            "engagement_priority": 6,
+            "recommended_messaging": "Emphasize competitive pricing, transparent TCO, and streamlined contract terms compared to alternatives."
+          },
+          {
+            "name": "Emma Turner",
+            "role": "Head of Operations",
+            "influence_level": "high",
+            "engagement_priority": 9,
+            "recommended_messaging": "Showcase operational improvements, risk mitigation, and how the offering can simplify current workflows."
+          }
+        ],
+        "engagement_plan": {
+          "phases": [
+            {
+              "phase_number": 1,
+              "phase_name": "Stakeholder Discovery & Alignment",
+              "objectives": [
+                "Identify all key stakeholders and map their priorities",
+                "Establish solution alignment with business objectives"
+              ],
+              "activities": [
+                "Conduct discovery workshops",
+                "Develop stakeholder matrix",
+                "Share initial value proposition deck"
+              ],
+              "success_criteria": [
+                "Stakeholder map completed",
+                "Validated business objectives with sponsor"
+              ],
+              "estimated_duration": "2 weeks"
+            },
+            {
+              "phase_number": 2,
+              "phase_name": "Solution Validation & Proof",
+              "objectives": [
+                "Demonstrate technical and business-fit through pilot",
+                "Gather measurable results to build business case"
+              ],
+              "activities": [
+                "Run PoC or pilot",
+                "Document outcomes and user feedback"
+              ],
+              "success_criteria": [
+                "Pilot success metrics achieved",
+                "User testimonials obtained"
+              ],
+              "estimated_duration": "4 weeks"
+            },
+            {
+              "phase_number": 3,
+              "phase_name": "Commercial Negotiation & Close",
+              "objectives": [
+                "Address procurement and legal concerns",
+                "Reach consensus on pricing and terms",
+                "Secure executive sign-off"
+              ],
+              "activities": [
+                "Facilitate procurement and legal reviews",
+                "Negotiate pricing and contract terms",
+                "Present final proposal to steering committee"
+              ],
+              "success_criteria": [
+                "Contract signed",
+                "Internal announcement of partnership"
+              ],
+              "estimated_duration": "3 weeks"
+            }
+          ],
+          "critical_path": [
+            "Stakeholder alignment",
+            "Pilot/Poc success",
+            "Procurement approval",
+            "Executive sponsorship"
+          ]
+        }
+      },
+      "objection_handling": {
+        "anticipated_objections": [
+          {
+            "objection": "The solution is more expensive than current provider.",
+            "likelihood": "high",
+            "category": "price",
+            "response": "Demonstrate lower total cost of ownership and quantify efficiency gains to justify premium.",
+            "supporting_evidence": [
+              "ROI case studies from similar clients",
+              "TCO comparison spreadsheets"
+            ]
+          },
+          {
+            "objection": "Implementation timeline does not align with our internal deadlines.",
+            "likelihood": "medium",
+            "category": "timing",
+            "response": "Offer a phased deployment and dedicated onboarding resources to accelerate time-to-value.",
+            "supporting_evidence": [
+              "Previous phased rollout examples",
+              "Customer references on onboarding speed"
+            ]
+          },
+          {
+            "objection": "We are considering a competitor with a longer track record in our industry.",
+            "likelihood": "medium",
+            "category": "competition",
+            "response": "Focus on unique differentiation (e.g., advanced features, support), and bring forward references from similar industries.",
+            "supporting_evidence": [
+              "Gartner/Forrester analyst reports",
+              "Industry peer customer testimonials"
+            ]
+          },
+          {
+            "objection": "Other projects currently have higher internal priority.",
+            "likelihood": "medium",
+            "category": "internal_priority",
+            "response": "Reposition the solution as an enabler for existing priorities or a quick-win to secure early value.",
+            "supporting_evidence": [
+              "Case study on accelerated business impact",
+              "Linkage to ongoing transformation initiatives"
+            ]
+          },
+          {
+            "objection": "Integration with legacy systems is a concern.",
+            "likelihood": "low",
+            "category": "technical",
+            "response": "Provide detailed integration guides and success stories along with dedicated technical support.",
+            "supporting_evidence": [
+              "Technical architecture documentation",
+              "Integration reference implementations"
+            ]
+          }
+        ]
+      },
+      "deal_progression": {
+        "current_stage": "Solution Validation & Proof",
+        "next_steps": [
+          {
+            "action": "Schedule and kick off pilot engagement",
+            "owner": "Account Executive",
+            "deadline": "2024-07-12",
+            "dependencies": [
+              "Completion of stakeholder alignment"
+            ]
+          },
+          {
+            "action": "Collect and analyze pilot feedback",
+            "owner": "Customer Success Manager",
+            "deadline": "2024-08-02",
+            "dependencies": [
+              "Pilot completion"
+            ]
+          },
+          {
+            "action": "Prepare business value assessment and final proposal",
+            "owner": "Account Executive",
+            "deadline": "2024-08-07",
+            "dependencies": [
+              "Pilot feedback consolidated"
+            ]
+          }
+        ],
+        "timeline": {
+          "estimated_close_date": "2024-08-23",
+          "confidence_level": 75
+        },
+        "risk_factors": [
+          {
+            "risk": "Delayed stakeholder buy-in from operations team",
+            "severity": "medium",
+            "mitigation": "Increase executive engagement and facilitate additional workshops as needed"
+          },
+          {
+            "risk": "Procurement cycle takes longer than anticipated",
+            "severity": "medium",
+            "mitigation": "Begin legal/procurement process early and maintain regular follow-ups"
+          },
+          {
+            "risk": "Negative pilot result or technical blocker identified",
+            "severity": "high",
+            "mitigation": "Assign technical specialist to pilot and prepare contingency plan with alternative configurations"
+          }
+        ]
+      }
+    },
+    "metadata": {
+      "agent_name": "Claude Co-work Agent",
+      "timestamp": "2024-06-19T16:30:00Z",
+      "reasoning_depth": "extended"
+    }
+  }
+}
