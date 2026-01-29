@@ -1,0 +1,150 @@
+{
+  "agent_name": "Follow-up Sequence Engine",
+  "agent_id": "697b9f35c03792e039e5f116",
+  "agent_purpose": "custom",
+  "description": "Generates value-add follow-up sequences with timing and social proof strategy",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "followup_sequence": [
+        {
+          "sequence_number": "number",
+          "message_text": "string",
+          "word_count": "number",
+          "value_add_type": "string",
+          "timing_delay_days": "number",
+          "send_after_date": "string",
+          "includes_question": "boolean",
+          "permission_based": "boolean"
+        }
+      ],
+      "sequence_strategy": {
+        "approach": "string",
+        "reasoning": "string",
+        "stop_after": "number",
+        "fallback_action": "string"
+      },
+      "value_assets_mentioned": [
+        "string"
+      ],
+      "social_proof_used": [
+        "string"
+      ]
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "followup_sequence": [
+        {
+          "sequence_number": 1,
+          "message_text": "alex, by the way - just came across new data showing teams that streamlined onboarding cut ramp time by 50%. reminded me of your growth plans. want me to share the summary?",
+          "word_count": 32,
+          "value_add_type": "new_insight",
+          "timing_delay_days": 3,
+          "send_after_date": "2024-06-17T00:00:00Z",
+          "includes_question": true,
+          "permission_based": true
+        },
+        {
+          "sequence_number": 2,
+          "message_text": "alex, worked with another fintech last month dealing with fast hires. they shaved onboarding from 3 weeks to 5 days using automation. curious if you\u2019re tackling anything similar with your new cohort?",
+          "word_count": 35,
+          "value_add_type": "social_proof",
+          "timing_delay_days": 7,
+          "send_after_date": "2024-06-24T00:00:00Z",
+          "includes_question": true,
+          "permission_based": true
+        },
+        {
+          "sequence_number": 3,
+          "message_text": "alex, no pressure, but i put together a quick one-pager outlining onboarding automations for fast-growing teams like yours. want me to send it over or should i leave you be?",
+          "word_count": 32,
+          "value_add_type": "asset_offer",
+          "timing_delay_days": 10,
+          "send_after_date": "2024-07-04T00:00:00Z",
+          "includes_question": true,
+          "permission_based": true
+        }
+      ],
+      "sequence_strategy": {
+        "approach": "value_escalation",
+        "reasoning": "Starts with relevant data, moves to relatable success, and ends with a targeted asset to maximize openness and value in each step.",
+        "stop_after": 3,
+        "fallback_action": "add_to_nurture"
+      },
+      "value_assets_mentioned": [
+        "summary of onboarding data",
+        "one-pager outlining onboarding automations"
+      ],
+      "social_proof_used": [
+        "fintech company reduced onboarding from 3 weeks to 5 days"
+      ]
+    },
+    "metadata": {
+      "agent_name": "Follow-up Sequence Engine",
+      "timestamp": "2024-06-14T12:00:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-29T17:56:25.764182",
+  "test_message_used": "Provide a sample response",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "followup_sequence": [
+        {
+          "sequence_number": 1,
+          "message_text": "alex, by the way - just came across new data showing teams that streamlined onboarding cut ramp time by 50%. reminded me of your growth plans. want me to share the summary?",
+          "word_count": 32,
+          "value_add_type": "new_insight",
+          "timing_delay_days": 3,
+          "send_after_date": "2024-06-17T00:00:00Z",
+          "includes_question": true,
+          "permission_based": true
+        },
+        {
+          "sequence_number": 2,
+          "message_text": "alex, worked with another fintech last month dealing with fast hires. they shaved onboarding from 3 weeks to 5 days using automation. curious if you\u2019re tackling anything similar with your new cohort?",
+          "word_count": 35,
+          "value_add_type": "social_proof",
+          "timing_delay_days": 7,
+          "send_after_date": "2024-06-24T00:00:00Z",
+          "includes_question": true,
+          "permission_based": true
+        },
+        {
+          "sequence_number": 3,
+          "message_text": "alex, no pressure, but i put together a quick one-pager outlining onboarding automations for fast-growing teams like yours. want me to send it over or should i leave you be?",
+          "word_count": 32,
+          "value_add_type": "asset_offer",
+          "timing_delay_days": 10,
+          "send_after_date": "2024-07-04T00:00:00Z",
+          "includes_question": true,
+          "permission_based": true
+        }
+      ],
+      "sequence_strategy": {
+        "approach": "value_escalation",
+        "reasoning": "Starts with relevant data, moves to relatable success, and ends with a targeted asset to maximize openness and value in each step.",
+        "stop_after": 3,
+        "fallback_action": "add_to_nurture"
+      },
+      "value_assets_mentioned": [
+        "summary of onboarding data",
+        "one-pager outlining onboarding automations"
+      ],
+      "social_proof_used": [
+        "fintech company reduced onboarding from 3 weeks to 5 days"
+      ]
+    },
+    "metadata": {
+      "agent_name": "Follow-up Sequence Engine",
+      "timestamp": "2024-06-14T12:00:00Z"
+    }
+  }
+}

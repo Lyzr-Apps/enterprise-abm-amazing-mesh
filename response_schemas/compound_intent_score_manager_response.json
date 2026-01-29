@@ -1,0 +1,256 @@
+{
+  "agent_name": "Compound Intent Score Manager",
+  "agent_id": "697b9dfb23e56dc88c2033b7",
+  "agent_purpose": "calculator",
+  "description": "Calculates compound intent scores with time decay and signal velocity analysis",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "lead_id": "string",
+      "lead_name": "string",
+      "current_score": "number",
+      "score_breakdown": [
+        {
+          "signal_type": "string",
+          "base_points": "number",
+          "current_points": "number",
+          "detected_at": "string",
+          "decay_days_remaining": "number",
+          "is_expired": "boolean"
+        }
+      ],
+      "signal_history": [
+        {
+          "signal_type": "string",
+          "timestamp": "string",
+          "source": "string"
+        }
+      ],
+      "signal_velocity": {
+        "signals_per_week": "number",
+        "total_signals": "number",
+        "weeks_active": "number",
+        "velocity_multiplier": "number"
+      },
+      "escalation_status": "string",
+      "trigger_day0_memo": "boolean",
+      "days_to_full_decay": "number",
+      "next_action": "string"
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "lead_id": "sample-lead@example.com",
+      "lead_name": "Sample Lead",
+      "current_score": 100,
+      "score_breakdown": [
+        {
+          "signal_type": "LinkedIn competitor comment",
+          "base_points": 50,
+          "current_points": 39.29,
+          "detected_at": "2024-06-10T12:00:00Z",
+          "decay_days_remaining": 3,
+          "is_expired": false
+        },
+        {
+          "signal_type": "New job role announcement",
+          "base_points": 30,
+          "current_points": 27,
+          "detected_at": "2024-06-17T12:00:00Z",
+          "decay_days_remaining": 23,
+          "is_expired": false
+        },
+        {
+          "signal_type": "Website visit",
+          "base_points": 20,
+          "current_points": 8.57,
+          "detected_at": "2024-06-11T12:00:00Z",
+          "decay_days_remaining": 1,
+          "is_expired": false
+        },
+        {
+          "signal_type": "Content download",
+          "base_points": 15,
+          "current_points": 11.07,
+          "detected_at": "2024-06-14T12:00:00Z",
+          "decay_days_remaining": 10,
+          "is_expired": false
+        },
+        {
+          "signal_type": "Competitor post like",
+          "base_points": 10,
+          "current_points": 5,
+          "detected_at": "2024-06-14T12:00:00Z",
+          "decay_days_remaining": 3,
+          "is_expired": false
+        },
+        {
+          "signal_type": "Profile update with pain points",
+          "base_points": 25,
+          "current_points": 9.76,
+          "detected_at": "2024-06-03T12:00:00Z",
+          "decay_days_remaining": 3,
+          "is_expired": false
+        }
+      ],
+      "signal_history": [
+        {
+          "signal_type": "LinkedIn competitor comment",
+          "timestamp": "2024-06-10T12:00:00Z",
+          "source": "LinkedIn"
+        },
+        {
+          "signal_type": "New job role announcement",
+          "timestamp": "2024-06-17T12:00:00Z",
+          "source": "LinkedIn"
+        },
+        {
+          "signal_type": "Website visit",
+          "timestamp": "2024-06-11T12:00:00Z",
+          "source": "Website"
+        },
+        {
+          "signal_type": "Content download",
+          "timestamp": "2024-06-14T12:00:00Z",
+          "source": "Website"
+        },
+        {
+          "signal_type": "Competitor post like",
+          "timestamp": "2024-06-14T12:00:00Z",
+          "source": "LinkedIn"
+        },
+        {
+          "signal_type": "Profile update with pain points",
+          "timestamp": "2024-06-03T12:00:00Z",
+          "source": "LinkedIn"
+        }
+      ],
+      "signal_velocity": {
+        "signals_per_week": 3.43,
+        "total_signals": 6,
+        "weeks_active": 1.75,
+        "velocity_multiplier": 1.2
+      },
+      "escalation_status": "HOT",
+      "trigger_day0_memo": true,
+      "days_to_full_decay": 23,
+      "next_action": "Trigger Day 0 Memo generation. Hand off to sales for immediate follow-up."
+    },
+    "metadata": {
+      "agent_name": "Compound Intent Score Manager",
+      "timestamp": "2024-06-21T12:00:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-29T17:51:07.645295",
+  "test_message_used": "Calculate a sample value for testing",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "lead_id": "sample-lead@example.com",
+      "lead_name": "Sample Lead",
+      "current_score": 100,
+      "score_breakdown": [
+        {
+          "signal_type": "LinkedIn competitor comment",
+          "base_points": 50,
+          "current_points": 39.29,
+          "detected_at": "2024-06-10T12:00:00Z",
+          "decay_days_remaining": 3,
+          "is_expired": false
+        },
+        {
+          "signal_type": "New job role announcement",
+          "base_points": 30,
+          "current_points": 27,
+          "detected_at": "2024-06-17T12:00:00Z",
+          "decay_days_remaining": 23,
+          "is_expired": false
+        },
+        {
+          "signal_type": "Website visit",
+          "base_points": 20,
+          "current_points": 8.57,
+          "detected_at": "2024-06-11T12:00:00Z",
+          "decay_days_remaining": 1,
+          "is_expired": false
+        },
+        {
+          "signal_type": "Content download",
+          "base_points": 15,
+          "current_points": 11.07,
+          "detected_at": "2024-06-14T12:00:00Z",
+          "decay_days_remaining": 10,
+          "is_expired": false
+        },
+        {
+          "signal_type": "Competitor post like",
+          "base_points": 10,
+          "current_points": 5,
+          "detected_at": "2024-06-14T12:00:00Z",
+          "decay_days_remaining": 3,
+          "is_expired": false
+        },
+        {
+          "signal_type": "Profile update with pain points",
+          "base_points": 25,
+          "current_points": 9.76,
+          "detected_at": "2024-06-03T12:00:00Z",
+          "decay_days_remaining": 3,
+          "is_expired": false
+        }
+      ],
+      "signal_history": [
+        {
+          "signal_type": "LinkedIn competitor comment",
+          "timestamp": "2024-06-10T12:00:00Z",
+          "source": "LinkedIn"
+        },
+        {
+          "signal_type": "New job role announcement",
+          "timestamp": "2024-06-17T12:00:00Z",
+          "source": "LinkedIn"
+        },
+        {
+          "signal_type": "Website visit",
+          "timestamp": "2024-06-11T12:00:00Z",
+          "source": "Website"
+        },
+        {
+          "signal_type": "Content download",
+          "timestamp": "2024-06-14T12:00:00Z",
+          "source": "Website"
+        },
+        {
+          "signal_type": "Competitor post like",
+          "timestamp": "2024-06-14T12:00:00Z",
+          "source": "LinkedIn"
+        },
+        {
+          "signal_type": "Profile update with pain points",
+          "timestamp": "2024-06-03T12:00:00Z",
+          "source": "LinkedIn"
+        }
+      ],
+      "signal_velocity": {
+        "signals_per_week": 3.43,
+        "total_signals": 6,
+        "weeks_active": 1.75,
+        "velocity_multiplier": 1.2
+      },
+      "escalation_status": "HOT",
+      "trigger_day0_memo": true,
+      "days_to_full_decay": 23,
+      "next_action": "Trigger Day 0 Memo generation. Hand off to sales for immediate follow-up."
+    },
+    "metadata": {
+      "agent_name": "Compound Intent Score Manager",
+      "timestamp": "2024-06-21T12:00:00Z"
+    }
+  }
+}

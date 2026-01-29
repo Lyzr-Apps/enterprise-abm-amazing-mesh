@@ -1,0 +1,112 @@
+{
+  "agent_name": "Response Classifier Agent",
+  "agent_id": "697b9efcbc6eb6293f5547f4",
+  "agent_purpose": "analyzer",
+  "description": "Classifies prospect replies and suggests contextual follow-ups with sentiment and urgency analysis",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "classification": "string",
+      "sentiment_score": "string",
+      "urgency_level": "string",
+      "prospect_reply_summary": "string",
+      "key_phrases": [
+        "string"
+      ],
+      "suggested_response": {
+        "message_text": "string",
+        "response_type": "string",
+        "timing": "string",
+        "include_link": "boolean",
+        "call_to_action": "string"
+      },
+      "next_action": "string",
+      "objection_details": {
+        "concern_category": "string",
+        "root_cause": "string",
+        "counter_strategy": "string"
+      },
+      "redirect_info": {
+        "suggested_contact": "string",
+        "warm_intro_request": "string"
+      }
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "classification": "HOW_DOES_THIS_WORK",
+      "sentiment_score": "neutral",
+      "urgency_level": "warm",
+      "prospect_reply_summary": "They asked you to analyze a sample, expressing a request for understanding or insight.",
+      "key_phrases": [
+        "analyze",
+        "sample data",
+        "testing"
+      ],
+      "suggested_response": {
+        "message_text": "happy to take a look. want me to share an example breakdown of how we usually approach analyzing test data, or do you have a particular angle in mind?",
+        "response_type": "question",
+        "timing": "immediate",
+        "include_link": false,
+        "call_to_action": "let me know if you want a quick example or have a specific goal for the analysis"
+      },
+      "next_action": "send_asset",
+      "objection_details": {
+        "concern_category": "none",
+        "root_cause": "",
+        "counter_strategy": ""
+      },
+      "redirect_info": {
+        "suggested_contact": "",
+        "warm_intro_request": ""
+      }
+    },
+    "metadata": {
+      "agent_name": "Response Classifier Agent",
+      "timestamp": "2024-06-13T15:59:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-29T17:55:22.298104",
+  "test_message_used": "Analyze this sample data for testing",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "classification": "HOW_DOES_THIS_WORK",
+      "sentiment_score": "neutral",
+      "urgency_level": "warm",
+      "prospect_reply_summary": "They asked you to analyze a sample, expressing a request for understanding or insight.",
+      "key_phrases": [
+        "analyze",
+        "sample data",
+        "testing"
+      ],
+      "suggested_response": {
+        "message_text": "happy to take a look. want me to share an example breakdown of how we usually approach analyzing test data, or do you have a particular angle in mind?",
+        "response_type": "question",
+        "timing": "immediate",
+        "include_link": false,
+        "call_to_action": "let me know if you want a quick example or have a specific goal for the analysis"
+      },
+      "next_action": "send_asset",
+      "objection_details": {
+        "concern_category": "none",
+        "root_cause": "",
+        "counter_strategy": ""
+      },
+      "redirect_info": {
+        "suggested_contact": "",
+        "warm_intro_request": ""
+      }
+    },
+    "metadata": {
+      "agent_name": "Response Classifier Agent",
+      "timestamp": "2024-06-13T15:59:00Z"
+    }
+  }
+}

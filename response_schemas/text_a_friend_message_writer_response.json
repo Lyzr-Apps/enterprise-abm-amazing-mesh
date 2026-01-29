@@ -1,0 +1,68 @@
+{
+  "agent_name": "Text-a-Friend Message Writer",
+  "agent_id": "697b9e5a23e56dc88c20340c",
+  "agent_purpose": "custom",
+  "description": "Generates ultra-casual peer-to-peer DMs with strict style validation and vibe checking",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "message_text": "string",
+      "word_count": "number",
+      "signal_mentioned": "string",
+      "insight_included": "string",
+      "question_ending": "string",
+      "style_match_score": "number",
+      "vibe_check_passed": "boolean",
+      "violations_detected": [
+        "any"
+      ],
+      "rewrite_needed": "boolean",
+      "rewrite_reason": "string"
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "message_text": "sam, saw you joined rocketship last week. noticed the team doubled headcount in the last six months which is wild. are you focusing more on onboarding right now or diving straight into new projects?",
+      "word_count": 36,
+      "signal_mentioned": "joined rocketship last week",
+      "insight_included": "team doubled headcount in the last six months",
+      "question_ending": "are you focusing more on onboarding right now or diving straight into new projects?",
+      "style_match_score": 98,
+      "vibe_check_passed": true,
+      "violations_detected": [],
+      "rewrite_needed": false,
+      "rewrite_reason": ""
+    },
+    "metadata": {
+      "agent_name": "Text-a-Friend Message Writer",
+      "timestamp": "2024-06-12T20:41:01Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-29T17:52:38.401448",
+  "test_message_used": "Provide a sample response",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "message_text": "sam, saw you joined rocketship last week. noticed the team doubled headcount in the last six months which is wild. are you focusing more on onboarding right now or diving straight into new projects?",
+      "word_count": 36,
+      "signal_mentioned": "joined rocketship last week",
+      "insight_included": "team doubled headcount in the last six months",
+      "question_ending": "are you focusing more on onboarding right now or diving straight into new projects?",
+      "style_match_score": 98,
+      "vibe_check_passed": true,
+      "violations_detected": [],
+      "rewrite_needed": false,
+      "rewrite_reason": ""
+    },
+    "metadata": {
+      "agent_name": "Text-a-Friend Message Writer",
+      "timestamp": "2024-06-12T20:41:01Z"
+    }
+  }
+}

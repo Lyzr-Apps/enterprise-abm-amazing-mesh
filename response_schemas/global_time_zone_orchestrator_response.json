@@ -1,0 +1,159 @@
+{
+  "agent_name": "Global Time-Zone Orchestrator",
+  "agent_id": "697b9f71c03792e039e5f16d",
+  "agent_purpose": "calculator",
+  "description": "Calculates optimal message send times based on timezone and engagement patterns",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "prospect_location": {
+        "city": "string",
+        "country": "string",
+        "timezone": "string",
+        "utc_offset": "string",
+        "current_local_time": "string"
+      },
+      "scheduled_send_time": {
+        "datetime_utc": "string",
+        "datetime_local": "string",
+        "send_window": "string",
+        "day_of_week": "string",
+        "rationale": "string"
+      },
+      "alternative_send_times": [
+        {
+          "datetime_utc": "string",
+          "datetime_local": "string",
+          "send_window": "string",
+          "priority": "string"
+        }
+      ],
+      "business_hours_validation": {
+        "is_business_hours": "boolean",
+        "is_weekend": "boolean",
+        "is_holiday": "boolean",
+        "holiday_name": "string"
+      },
+      "engagement_forecast": {
+        "estimated_open_rate": "string",
+        "estimated_response_rate": "string",
+        "optimal_day_rank": "number"
+      }
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "prospect_location": {
+        "city": "San Francisco",
+        "country": "United States",
+        "timezone": "America/Los_Angeles",
+        "utc_offset": "-07:00",
+        "current_local_time": "2024-06-13T09:00:00-07:00"
+      },
+      "scheduled_send_time": {
+        "datetime_utc": "2024-06-13T15:30:00Z",
+        "datetime_local": "2024-06-13T08:30:00-07:00",
+        "send_window": "morning_clearing",
+        "day_of_week": "Thursday",
+        "rationale": "Thursday is a high engagement day. 8:30 AM is optimal for morning notification clearing right after the workday begins in the prospect's timezone."
+      },
+      "alternative_send_times": [
+        {
+          "datetime_utc": "2024-06-13T19:00:00Z",
+          "datetime_local": "2024-06-13T12:00:00-07:00",
+          "send_window": "lunch_break",
+          "priority": "secondary"
+        },
+        {
+          "datetime_utc": "2024-06-13T00:30:00Z",
+          "datetime_local": "2024-06-13T17:30:00-07:00",
+          "send_window": "end_of_day",
+          "priority": "tertiary"
+        },
+        {
+          "datetime_utc": "2024-06-14T15:30:00Z",
+          "datetime_local": "2024-06-14T08:30:00-07:00",
+          "send_window": "morning_clearing",
+          "priority": "primary"
+        }
+      ],
+      "business_hours_validation": {
+        "is_business_hours": true,
+        "is_weekend": false,
+        "is_holiday": false,
+        "holiday_name": ""
+      },
+      "engagement_forecast": {
+        "estimated_open_rate": "high",
+        "estimated_response_rate": "high",
+        "optimal_day_rank": 3
+      }
+    },
+    "metadata": {
+      "agent_name": "Global Time-Zone Orchestrator",
+      "timestamp": "2024-06-13T16:00:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-29T17:57:18.888636",
+  "test_message_used": "Calculate a sample value for testing",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "prospect_location": {
+        "city": "San Francisco",
+        "country": "United States",
+        "timezone": "America/Los_Angeles",
+        "utc_offset": "-07:00",
+        "current_local_time": "2024-06-13T09:00:00-07:00"
+      },
+      "scheduled_send_time": {
+        "datetime_utc": "2024-06-13T15:30:00Z",
+        "datetime_local": "2024-06-13T08:30:00-07:00",
+        "send_window": "morning_clearing",
+        "day_of_week": "Thursday",
+        "rationale": "Thursday is a high engagement day. 8:30 AM is optimal for morning notification clearing right after the workday begins in the prospect's timezone."
+      },
+      "alternative_send_times": [
+        {
+          "datetime_utc": "2024-06-13T19:00:00Z",
+          "datetime_local": "2024-06-13T12:00:00-07:00",
+          "send_window": "lunch_break",
+          "priority": "secondary"
+        },
+        {
+          "datetime_utc": "2024-06-13T00:30:00Z",
+          "datetime_local": "2024-06-13T17:30:00-07:00",
+          "send_window": "end_of_day",
+          "priority": "tertiary"
+        },
+        {
+          "datetime_utc": "2024-06-14T15:30:00Z",
+          "datetime_local": "2024-06-14T08:30:00-07:00",
+          "send_window": "morning_clearing",
+          "priority": "primary"
+        }
+      ],
+      "business_hours_validation": {
+        "is_business_hours": true,
+        "is_weekend": false,
+        "is_holiday": false,
+        "holiday_name": ""
+      },
+      "engagement_forecast": {
+        "estimated_open_rate": "high",
+        "estimated_response_rate": "high",
+        "optimal_day_rank": 3
+      }
+    },
+    "metadata": {
+      "agent_name": "Global Time-Zone Orchestrator",
+      "timestamp": "2024-06-13T16:00:00Z"
+    }
+  }
+}

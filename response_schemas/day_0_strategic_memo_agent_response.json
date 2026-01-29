@@ -1,0 +1,125 @@
+{
+  "agent_name": "Day 0 Strategic Memo Agent",
+  "agent_id": "697b9e2a23e56dc88c2033de",
+  "agent_purpose": "analyzer",
+  "description": "Creates strategic memos with signal context, business challenges, compliments, solution mapping, and recommended hooks",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "signal_context": {
+        "trigger_type": "string",
+        "exact_quote": "string",
+        "detected_at": "string",
+        "source_url": "string"
+      },
+      "business_challenge": {
+        "challenge": "string",
+        "evidence": "string",
+        "urgency_level": "string"
+      },
+      "genuine_compliment": {
+        "achievement": "string",
+        "source": "string",
+        "date": "string"
+      },
+      "lyzr_solution_map": {
+        "their_challenge": "string",
+        "lyzr_feature": "string",
+        "why_it_fits": "string"
+      },
+      "recommended_hook": {
+        "approach": "string",
+        "draft_opening_line": "string",
+        "reasoning": "string"
+      },
+      "personalization_hooks": [
+        "any"
+      ],
+      "estimated_reply_probability": "string",
+      "memo_word_count": "number"
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "error",
+    "result": {
+      "signal_context": {
+        "trigger_type": "",
+        "exact_quote": "",
+        "detected_at": "",
+        "source_url": ""
+      },
+      "business_challenge": {
+        "challenge": "",
+        "evidence": "",
+        "urgency_level": "exploratory"
+      },
+      "genuine_compliment": {
+        "achievement": "",
+        "source": "",
+        "date": ""
+      },
+      "lyzr_solution_map": {
+        "their_challenge": "",
+        "lyzr_feature": "",
+        "why_it_fits": ""
+      },
+      "recommended_hook": {
+        "approach": "",
+        "draft_opening_line": "",
+        "reasoning": ""
+      },
+      "personalization_hooks": [],
+      "estimated_reply_probability": "low",
+      "memo_word_count": 0
+    },
+    "metadata": {
+      "agent_name": "Day 0 Strategic Memo Agent",
+      "timestamp": "2024-06-13T14:39:19Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-29T17:51:49.089214",
+  "test_message_used": "Analyze this sample data for testing",
+  "actual_test_response": {
+    "status": "error",
+    "result": {
+      "signal_context": {
+        "trigger_type": "",
+        "exact_quote": "",
+        "detected_at": "",
+        "source_url": ""
+      },
+      "business_challenge": {
+        "challenge": "",
+        "evidence": "",
+        "urgency_level": "exploratory"
+      },
+      "genuine_compliment": {
+        "achievement": "",
+        "source": "",
+        "date": ""
+      },
+      "lyzr_solution_map": {
+        "their_challenge": "",
+        "lyzr_feature": "",
+        "why_it_fits": ""
+      },
+      "recommended_hook": {
+        "approach": "",
+        "draft_opening_line": "",
+        "reasoning": ""
+      },
+      "personalization_hooks": [],
+      "estimated_reply_probability": "low",
+      "memo_word_count": 0
+    },
+    "metadata": {
+      "agent_name": "Day 0 Strategic Memo Agent",
+      "timestamp": "2024-06-13T14:39:19Z"
+    }
+  }
+}

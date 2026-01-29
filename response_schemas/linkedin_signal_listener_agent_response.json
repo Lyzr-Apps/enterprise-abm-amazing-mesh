@@ -1,0 +1,59 @@
+{
+  "agent_name": "LinkedIn Signal Listener Agent",
+  "agent_id": "697b9dda23e56dc88c2033a1",
+  "agent_purpose": "analyzer",
+  "description": "Detects and analyzes LinkedIn intent signals with signal strength classification",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "signals_detected": [
+        "any"
+      ],
+      "monitoring_summary": {
+        "total_signals": "number",
+        "hot_count": "number",
+        "warm_count": "number",
+        "cold_count": "number"
+      }
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "signals_detected": [],
+      "monitoring_summary": {
+        "total_signals": 0,
+        "hot_count": 0,
+        "warm_count": 0,
+        "cold_count": 0
+      }
+    },
+    "metadata": {
+      "agent_name": "LinkedIn Signal Listener Agent",
+      "timestamp": "2024-06-13T18:36:54Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-29T17:50:26.155152",
+  "test_message_used": "Analyze this sample data for testing",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "signals_detected": [],
+      "monitoring_summary": {
+        "total_signals": 0,
+        "hot_count": 0,
+        "warm_count": 0,
+        "cold_count": 0
+      }
+    },
+    "metadata": {
+      "agent_name": "LinkedIn Signal Listener Agent",
+      "timestamp": "2024-06-13T18:36:54Z"
+    }
+  }
+}

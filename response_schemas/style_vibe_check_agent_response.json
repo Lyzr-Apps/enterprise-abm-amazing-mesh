@@ -1,0 +1,111 @@
+{
+  "agent_name": "Style Vibe Check Agent",
+  "agent_id": "697b9e89814f1038c098a5c5",
+  "agent_purpose": "analyzer",
+  "description": "Analyzes message drafts for style violations and corporate speak with detailed scoring",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "vibe_check_passed": "boolean",
+      "violations_detected": [
+        {
+          "type": "string",
+          "violation": "string",
+          "location": "string",
+          "severity": "string"
+        }
+      ],
+      "word_count": "number",
+      "word_count_valid": "boolean",
+      "casual_score": "number",
+      "authenticity_score": "number",
+      "style_issues": [
+        "string"
+      ],
+      "positive_elements": [
+        "string"
+      ],
+      "rewrite_recommendations": [
+        "string"
+      ],
+      "final_verdict": "string"
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "vibe_check_passed": false,
+      "violations_detected": [
+        {
+          "type": "length",
+          "violation": "Word count < 30",
+          "location": "entire message",
+          "severity": "critical"
+        }
+      ],
+      "word_count": 6,
+      "word_count_valid": false,
+      "casual_score": 50,
+      "authenticity_score": 40,
+      "style_issues": [
+        "Message is too short for a first outreach",
+        "Does not establish context or a conversational tone"
+      ],
+      "positive_elements": [
+        "No corporate jargon detected",
+        "No formal openers or closings"
+      ],
+      "rewrite_recommendations": [
+        "Expand the message to provide more context",
+        "Keep the tone friendly and authentic while making it conversational"
+      ],
+      "final_verdict": "full_rewrite_required"
+    },
+    "metadata": {
+      "agent_name": "Style Vibe Check Agent",
+      "timestamp": "2024-06-08T23:11:40Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-29T17:53:26.329712",
+  "test_message_used": "Analyze this sample data for testing",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "vibe_check_passed": false,
+      "violations_detected": [
+        {
+          "type": "length",
+          "violation": "Word count < 30",
+          "location": "entire message",
+          "severity": "critical"
+        }
+      ],
+      "word_count": 6,
+      "word_count_valid": false,
+      "casual_score": 50,
+      "authenticity_score": 40,
+      "style_issues": [
+        "Message is too short for a first outreach",
+        "Does not establish context or a conversational tone"
+      ],
+      "positive_elements": [
+        "No corporate jargon detected",
+        "No formal openers or closings"
+      ],
+      "rewrite_recommendations": [
+        "Expand the message to provide more context",
+        "Keep the tone friendly and authentic while making it conversational"
+      ],
+      "final_verdict": "full_rewrite_required"
+    },
+    "metadata": {
+      "agent_name": "Style Vibe Check Agent",
+      "timestamp": "2024-06-08T23:11:40Z"
+    }
+  }
+}

@@ -1,10 +1,10 @@
 {
   "workflow_created": true,
   "agents_created": true,
-  "total_agents": 15,
-  "manager_agents": 2,
-  "sub_agents": 3,
-  "independent_agents": 10,
+  "total_agents": 27,
+  "manager_agents": 4,
+  "sub_agents": 5,
+  "independent_agents": 18,
   "knowledge_bases": 2,
   "agents": {
     "manager": {
@@ -30,6 +30,29 @@
           "697ace6bc03792e039e5adaa",
           "697ad4a9bc6eb6293f55040b",
           "697ad4c2c03792e039e5add8"
+        ]
+      },
+      "compound_intent_score_manager": {
+        "agent_id": "697b9dfb23e56dc88c2033b7",
+        "name": "Compound Intent Score Manager",
+        "type": "Manager",
+        "provider": "OpenAI",
+        "model": "gpt-4.1",
+        "manages": [
+          "697b9dda23e56dc88c2033a1",
+          "697ad49223e56dc88c1ff0f0"
+        ]
+      },
+      "multi_channel_load_balancer": {
+        "agent_id": "697ba06abc6eb6293f5549bb",
+        "name": "Multi-Channel Load Balancer",
+        "type": "Manager",
+        "provider": "OpenAI",
+        "model": "gpt-4.1",
+        "manages": [
+          "697ad4c2c03792e039e5add8",
+          "697ace6bc03792e039e5adaa",
+          "697ad4a9bc6eb6293f55040b"
         ]
       }
     },
@@ -60,6 +83,22 @@
         "model": "gpt-4.1",
         "knowledge_base": "697ace15115a3970d17438d4",
         "managed_by": "697ace4fbc6eb6293f5503f1"
+      },
+      "linkedin_signal_listener_agent": {
+        "agent_id": "697b9dda23e56dc88c2033a1",
+        "name": "LinkedIn Signal Listener Agent",
+        "type": "Sub-Agent",
+        "provider": "Perplexity",
+        "model": "sonar-pro",
+        "managed_by": "697b9dfb23e56dc88c2033b7"
+      },
+      "clay_enrichment_sub_agent": {
+        "agent_id": "697ad49223e56dc88c1ff0f0",
+        "name": "Clay Enrichment & Intent Agent",
+        "type": "Sub-Agent",
+        "provider": "OpenAI",
+        "model": "gpt-4.1",
+        "managed_by": "697b9dfb23e56dc88c2033b7"
       }
     },
     "independent_agents": {
@@ -139,6 +178,63 @@
         "type": "Independent",
         "provider": "Google",
         "model": "gemini-2.0-flash-exp"
+      },
+      "day_0_strategic_memo_agent": {
+        "agent_id": "697b9e2a23e56dc88c2033de",
+        "name": "Day 0 Strategic Memo Agent",
+        "type": "Independent",
+        "provider": "Perplexity",
+        "model": "sonar-pro"
+      },
+      "text_a_friend_message_writer": {
+        "agent_id": "697b9e5a23e56dc88c20340c",
+        "name": "Text-a-Friend Message Writer",
+        "type": "Independent",
+        "provider": "OpenAI",
+        "model": "gpt-4.1",
+        "knowledge_base": "697ace15115a3970d17438d4"
+      },
+      "style_vibe_check_agent": {
+        "agent_id": "697b9e89814f1038c098a5c5",
+        "name": "Style Vibe Check Agent",
+        "type": "Independent",
+        "provider": "OpenAI",
+        "model": "gpt-4.1"
+      },
+      "knowledge_graph_agent": {
+        "agent_id": "697b9eba23e56dc88c20349f",
+        "name": "Knowledge Graph Agent",
+        "type": "Independent",
+        "provider": "OpenAI",
+        "model": "gpt-4.1"
+      },
+      "response_classifier_agent": {
+        "agent_id": "697b9efcbc6eb6293f5547f4",
+        "name": "Response Classifier Agent",
+        "type": "Independent",
+        "provider": "OpenAI",
+        "model": "gpt-4.1"
+      },
+      "follow_up_sequence_engine": {
+        "agent_id": "697b9f35c03792e039e5f116",
+        "name": "Follow-up Sequence Engine",
+        "type": "Independent",
+        "provider": "OpenAI",
+        "model": "gpt-4.1"
+      },
+      "global_time_zone_orchestrator": {
+        "agent_id": "697b9f71c03792e039e5f16d",
+        "name": "Global Time-Zone Orchestrator",
+        "type": "Independent",
+        "provider": "OpenAI",
+        "model": "gpt-4.1"
+      },
+      "hubspot_ghost_writer_agent": {
+        "agent_id": "697ba016bc6eb6293f554937",
+        "name": "HubSpot Ghost-Writer Agent",
+        "type": "Independent",
+        "provider": "OpenAI",
+        "model": "gpt-4.1"
       }
     }
   },
@@ -175,9 +271,28 @@
     "genspark_research_agent_response.json",
     "claude_co_work_agent_response.json",
     "gemini_deep_research_agent_response.json",
-    "multi_channel_orchestrator_response.json"
+    "multi_channel_orchestrator_response.json",
+    "linkedin_signal_listener_agent_response.json",
+    "compound_intent_score_manager_response.json",
+    "day_0_strategic_memo_agent_response.json",
+    "text_a_friend_message_writer_response.json",
+    "style_vibe_check_agent_response.json",
+    "knowledge_graph_agent_response.json",
+    "response_classifier_agent_response.json",
+    "follow_up_sequence_engine_response.json",
+    "global_time_zone_orchestrator_response.json",
+    "hubspot_ghost_writer_agent_response.json",
+    "multi_channel_load_balancer_response.json"
   ],
   "created_at": "2026-01-29T00:00:00Z",
-  "updated_at": "2026-01-29T12:00:00Z",
-  "status": "complete"
+  "updated_at": "2026-01-29T18:00:00Z",
+  "status": "complete",
+  "signal_to_action_workflow": {
+    "enabled": true,
+    "total_agents": 11,
+    "manager_agents": 2,
+    "sub_agents": 2,
+    "independent_agents": 7,
+    "description": "Zero-touch workflow from LinkedIn signal detection to personalized outreach with automatic follow-ups and CRM documentation"
+  }
 }

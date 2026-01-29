@@ -1,0 +1,291 @@
+{
+  "agent_name": "Knowledge Graph Agent",
+  "agent_id": "697b9eba23e56dc88c20349f",
+  "agent_purpose": "analyzer",
+  "description": "Maps buying committee relationships and organizational structure for multi-threading strategy",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "company_name": "string",
+      "buying_committee": [
+        {
+          "name": "string",
+          "title": "string",
+          "role_category": "string",
+          "influence_level": "string",
+          "linkedin_url": "string",
+          "engagement_history": "string",
+          "approachability": "string"
+        }
+      ],
+      "decision_maker": {
+        "name": "string",
+        "title": "string",
+        "influence_level": "string",
+        "linkedin_activity": "string",
+        "best_approach": "string"
+      },
+      "champions": [
+        {
+          "name": "string",
+          "title": "string",
+          "why_champion": "string",
+          "engagement_score": "number"
+        }
+      ],
+      "mutual_connections": [
+        {
+          "our_connection": "string",
+          "their_connection": "string",
+          "degree": "string",
+          "relationship_strength": "string"
+        }
+      ],
+      "org_chart_summary": {
+        "sales_team_size": "number",
+        "marketing_team_size": "number",
+        "ops_team_size": "number",
+        "recent_hires": "number",
+        "hiring_trend": "string"
+      },
+      "multi_threading_strategy": {
+        "recommended_approach": "string",
+        "reasoning": "string",
+        "sequence": [
+          {
+            "step": "number",
+            "target": "string",
+            "action": "string",
+            "goal": "string"
+          }
+        ],
+        "estimated_deal_cycle": "string"
+      }
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "company_name": "Sample Data Inc.",
+      "buying_committee": [
+        {
+          "name": "Jane Smith",
+          "title": "Chief Revenue Officer",
+          "role_category": "decision_maker",
+          "influence_level": "high",
+          "linkedin_url": "https://linkedin.com/in/janesmith",
+          "engagement_history": "Viewed our LinkedIn post in May 2024.",
+          "approachability": "medium"
+        },
+        {
+          "name": "Carlos Ramirez",
+          "title": "Director of Sales Enablement",
+          "role_category": "champion",
+          "influence_level": "medium",
+          "linkedin_url": "https://linkedin.com/in/carlosramirez",
+          "engagement_history": "Commented and liked our LinkedIn whitepaper; connected with AE.",
+          "approachability": "high"
+        },
+        {
+          "name": "Cathy Wu",
+          "title": "SDR Manager",
+          "role_category": "champion",
+          "influence_level": "medium",
+          "linkedin_url": "https://linkedin.com/in/cathywu",
+          "engagement_history": "Liked 3 of our LinkedIn posts; registered for a webinar.",
+          "approachability": "high"
+        },
+        {
+          "name": "Sam Lee",
+          "title": "Sales Development Representative",
+          "role_category": "end_user",
+          "influence_level": "low",
+          "linkedin_url": "https://linkedin.com/in/samlee",
+          "engagement_history": "No direct engagement yet.",
+          "approachability": "medium"
+        }
+      ],
+      "decision_maker": {
+        "name": "Jane Smith",
+        "title": "Chief Revenue Officer",
+        "influence_level": "high",
+        "linkedin_activity": "moderate",
+        "best_approach": "champion_escalation"
+      },
+      "champions": [
+        {
+          "name": "Carlos Ramirez",
+          "title": "Director of Sales Enablement",
+          "why_champion": "Active on LinkedIn, engaged with content, benefits directly from enablement solutions.",
+          "engagement_score": 85
+        },
+        {
+          "name": "Cathy Wu",
+          "title": "SDR Manager",
+          "why_champion": "Engaged with posts/webinars; manages team of end-users who would utilize the tool.",
+          "engagement_score": 78
+        }
+      ],
+      "mutual_connections": [
+        {
+          "our_connection": "Emily Tran",
+          "their_connection": "Cathy Wu",
+          "degree": "2nd",
+          "relationship_strength": "medium"
+        }
+      ],
+      "org_chart_summary": {
+        "sales_team_size": 18,
+        "marketing_team_size": 10,
+        "ops_team_size": 5,
+        "recent_hires": 4,
+        "hiring_trend": "expanding"
+      },
+      "multi_threading_strategy": {
+        "recommended_approach": "bottom_up",
+        "reasoning": "Company size is mid-market to enterprise, strong champion activity, decision maker moderately active on LinkedIn.",
+        "sequence": [
+          {
+            "step": 1,
+            "target": "Cathy Wu (SDR Manager)",
+            "action": "Outreach with enablement case study and invite for discovery call.",
+            "goal": "Secure initial team interest and gather internal feedback."
+          },
+          {
+            "step": 2,
+            "target": "Carlos Ramirez (Director of Sales Enablement)",
+            "action": "Engage with tailored demo and ROI calculator.",
+            "goal": "Build internal advocacy and uncover additional buying criteria."
+          },
+          {
+            "step": 3,
+            "target": "Jane Smith (Chief Revenue Officer)",
+            "action": "Ask champion(s) to introduce us directly; frame business value and implementation plan.",
+            "goal": "Secure executive sponsorship and move to proposal stage."
+          }
+        ],
+        "estimated_deal_cycle": "60-90 days"
+      }
+    },
+    "metadata": {
+      "agent_name": "Knowledge Graph Agent",
+      "timestamp": "2024-06-12T12:00:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-01-29T17:54:23.208583",
+  "test_message_used": "Analyze this sample data for testing",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "company_name": "Sample Data Inc.",
+      "buying_committee": [
+        {
+          "name": "Jane Smith",
+          "title": "Chief Revenue Officer",
+          "role_category": "decision_maker",
+          "influence_level": "high",
+          "linkedin_url": "https://linkedin.com/in/janesmith",
+          "engagement_history": "Viewed our LinkedIn post in May 2024.",
+          "approachability": "medium"
+        },
+        {
+          "name": "Carlos Ramirez",
+          "title": "Director of Sales Enablement",
+          "role_category": "champion",
+          "influence_level": "medium",
+          "linkedin_url": "https://linkedin.com/in/carlosramirez",
+          "engagement_history": "Commented and liked our LinkedIn whitepaper; connected with AE.",
+          "approachability": "high"
+        },
+        {
+          "name": "Cathy Wu",
+          "title": "SDR Manager",
+          "role_category": "champion",
+          "influence_level": "medium",
+          "linkedin_url": "https://linkedin.com/in/cathywu",
+          "engagement_history": "Liked 3 of our LinkedIn posts; registered for a webinar.",
+          "approachability": "high"
+        },
+        {
+          "name": "Sam Lee",
+          "title": "Sales Development Representative",
+          "role_category": "end_user",
+          "influence_level": "low",
+          "linkedin_url": "https://linkedin.com/in/samlee",
+          "engagement_history": "No direct engagement yet.",
+          "approachability": "medium"
+        }
+      ],
+      "decision_maker": {
+        "name": "Jane Smith",
+        "title": "Chief Revenue Officer",
+        "influence_level": "high",
+        "linkedin_activity": "moderate",
+        "best_approach": "champion_escalation"
+      },
+      "champions": [
+        {
+          "name": "Carlos Ramirez",
+          "title": "Director of Sales Enablement",
+          "why_champion": "Active on LinkedIn, engaged with content, benefits directly from enablement solutions.",
+          "engagement_score": 85
+        },
+        {
+          "name": "Cathy Wu",
+          "title": "SDR Manager",
+          "why_champion": "Engaged with posts/webinars; manages team of end-users who would utilize the tool.",
+          "engagement_score": 78
+        }
+      ],
+      "mutual_connections": [
+        {
+          "our_connection": "Emily Tran",
+          "their_connection": "Cathy Wu",
+          "degree": "2nd",
+          "relationship_strength": "medium"
+        }
+      ],
+      "org_chart_summary": {
+        "sales_team_size": 18,
+        "marketing_team_size": 10,
+        "ops_team_size": 5,
+        "recent_hires": 4,
+        "hiring_trend": "expanding"
+      },
+      "multi_threading_strategy": {
+        "recommended_approach": "bottom_up",
+        "reasoning": "Company size is mid-market to enterprise, strong champion activity, decision maker moderately active on LinkedIn.",
+        "sequence": [
+          {
+            "step": 1,
+            "target": "Cathy Wu (SDR Manager)",
+            "action": "Outreach with enablement case study and invite for discovery call.",
+            "goal": "Secure initial team interest and gather internal feedback."
+          },
+          {
+            "step": 2,
+            "target": "Carlos Ramirez (Director of Sales Enablement)",
+            "action": "Engage with tailored demo and ROI calculator.",
+            "goal": "Build internal advocacy and uncover additional buying criteria."
+          },
+          {
+            "step": 3,
+            "target": "Jane Smith (Chief Revenue Officer)",
+            "action": "Ask champion(s) to introduce us directly; frame business value and implementation plan.",
+            "goal": "Secure executive sponsorship and move to proposal stage."
+          }
+        ],
+        "estimated_deal_cycle": "60-90 days"
+      }
+    },
+    "metadata": {
+      "agent_name": "Knowledge Graph Agent",
+      "timestamp": "2024-06-12T12:00:00Z"
+    }
+  }
+}
