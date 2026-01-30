@@ -7,27 +7,27 @@ import { Separator } from '@/components/ui/separator'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import { Progress } from '@/components/ui/progress'
 import {
-  LayoutDashboard,
-  Inbox,
-  Settings,
-  Activity,
-  Flame,
-  Building,
-  Star,
-  AlertCircle,
-  ChevronDown,
-  User,
-  Users,
-  Network,
-  TrendingUp,
-  TrendingDown,
-  BarChart,
-  Target,
-  MessageSquare,
-  Globe,
-  Zap,
-  Loader2
-} from 'lucide-react'
+  MdDashboard as LayoutDashboard,
+  MdInbox as Inbox,
+  MdSettings as Settings,
+  MdShowChart as Activity,
+  MdLocalFireDepartment as Flame,
+  MdBusiness as Building,
+  MdStar as Star,
+  MdError as AlertCircle,
+  MdExpandMore as ChevronDown,
+  MdPerson as User,
+  MdPeople as Users,
+  MdHub as Network,
+  MdTrendingUp as TrendingUp,
+  MdTrendingDown as TrendingDown,
+  MdBarChart as BarChart,
+  MdGpsFixed as Target,
+  MdMessage as MessageSquare,
+  MdPublic as Globe,
+  MdFlashOn as Zap,
+  MdAutorenew as Loader2
+} from 'react-icons/md'
 import { cn } from '@/lib/utils'
 
 // =============================================================================
@@ -79,8 +79,11 @@ interface IntentSignal {
   company: string
   description: string
   strength: 'hot' | 'warm' | 'cold'
+  signalType: string
   timeAgo: string
   intentScore: number
+  detectedAt: string
+  source: string
 }
 
 interface FunnelStage {
@@ -103,8 +106,11 @@ const MOCK_SIGNALS: IntentSignal[] = [
     company: 'TechFlow Inc',
     description: 'Commented on competitor post about pricing issues - mentioned "looking for alternatives"',
     strength: 'hot',
+    signalType: 'competitor_comment',
     timeAgo: '3 min ago',
-    intentScore: 127
+    intentScore: 127,
+    detectedAt: '2026-01-29T14:57:00Z',
+    source: 'linkedin'
   },
   {
     id: '2',
@@ -113,8 +119,11 @@ const MOCK_SIGNALS: IntentSignal[] = [
     company: 'SalesForce Pro',
     description: 'Posted about scaling challenges + changed job title to CRO (promotion signal)',
     strength: 'hot',
+    signalType: 'job_change',
     timeAgo: '12 min ago',
-    intentScore: 143
+    intentScore: 143,
+    detectedAt: '2026-01-29T14:48:00Z',
+    source: 'linkedin'
   },
   {
     id: '3',
@@ -123,8 +132,11 @@ const MOCK_SIGNALS: IntentSignal[] = [
     company: 'StartupCo',
     description: 'Engaged with 3 posts about AI sales automation this week',
     strength: 'warm',
+    signalType: 'content_engagement',
     timeAgo: '1 hour ago',
-    intentScore: 89
+    intentScore: 89,
+    detectedAt: '2026-01-29T14:00:00Z',
+    source: 'linkedin'
   },
   {
     id: '4',
@@ -133,8 +145,11 @@ const MOCK_SIGNALS: IntentSignal[] = [
     company: 'Enterprise Solutions',
     description: 'Company hiring spike: 5 new BDR roles posted in last 2 weeks',
     strength: 'hot',
+    signalType: 'hiring_spike',
     timeAgo: '2 hours ago',
-    intentScore: 156
+    intentScore: 156,
+    detectedAt: '2026-01-29T13:00:00Z',
+    source: 'linkedin'
   },
   {
     id: '5',
@@ -143,8 +158,11 @@ const MOCK_SIGNALS: IntentSignal[] = [
     company: 'DataScale Inc',
     description: 'Downloaded competitor comparison whitepaper from industry site',
     strength: 'warm',
+    signalType: 'content_download',
     timeAgo: '4 hours ago',
-    intentScore: 78
+    intentScore: 78,
+    detectedAt: '2026-01-29T11:00:00Z',
+    source: 'website'
   },
   {
     id: '6',
@@ -153,8 +171,11 @@ const MOCK_SIGNALS: IntentSignal[] = [
     company: 'CloudNative Labs',
     description: 'Series B funding announced ($30M) - expansion mode detected',
     strength: 'hot',
+    signalType: 'funding_round',
     timeAgo: '5 hours ago',
-    intentScore: 198
+    intentScore: 198,
+    detectedAt: '2026-01-29T10:00:00Z',
+    source: 'crunchbase'
   },
   {
     id: '7',
@@ -163,8 +184,11 @@ const MOCK_SIGNALS: IntentSignal[] = [
     company: 'FinTech Innovations',
     description: 'Visited pricing page 3x + demo video watched to completion',
     strength: 'hot',
+    signalType: 'website_visit',
     timeAgo: '6 hours ago',
-    intentScore: 134
+    intentScore: 134,
+    detectedAt: '2026-01-29T09:00:00Z',
+    source: 'website'
   },
   {
     id: '8',
@@ -173,8 +197,11 @@ const MOCK_SIGNALS: IntentSignal[] = [
     company: 'GrowthTech',
     description: 'Commented on LinkedIn post: "Our current stack is becoming too complex"',
     strength: 'warm',
+    signalType: 'pain_point_comment',
     timeAgo: '8 hours ago',
-    intentScore: 92
+    intentScore: 92,
+    detectedAt: '2026-01-29T07:00:00Z',
+    source: 'linkedin'
   },
   {
     id: '9',
@@ -183,8 +210,11 @@ const MOCK_SIGNALS: IntentSignal[] = [
     company: 'SaaS Dynamics',
     description: 'Shared article about improving sales efficiency - mutual connection alert',
     strength: 'warm',
+    signalType: 'content_share',
     timeAgo: '10 hours ago',
-    intentScore: 71
+    intentScore: 71,
+    detectedAt: '2026-01-29T05:00:00Z',
+    source: 'linkedin'
   },
   {
     id: '10',
@@ -193,8 +223,11 @@ const MOCK_SIGNALS: IntentSignal[] = [
     company: 'AI Platforms Inc',
     description: 'LinkedIn activity spike: 8 posts this week (up from 1/week average)',
     strength: 'cold',
+    signalType: 'activity_spike',
     timeAgo: '12 hours ago',
-    intentScore: 54
+    intentScore: 54,
+    detectedAt: '2026-01-29T03:00:00Z',
+    source: 'linkedin'
   },
   {
     id: '11',
@@ -203,8 +236,11 @@ const MOCK_SIGNALS: IntentSignal[] = [
     company: 'TechVision Corp',
     description: 'Job change alert: Started new role 30 days ago (honeymoon window)',
     strength: 'hot',
+    signalType: 'job_change',
     timeAgo: '14 hours ago',
-    intentScore: 112
+    intentScore: 112,
+    detectedAt: '2026-01-29T01:00:00Z',
+    source: 'linkedin'
   },
   {
     id: '12',
@@ -213,8 +249,11 @@ const MOCK_SIGNALS: IntentSignal[] = [
     company: 'Scale Solutions',
     description: 'Engaged with competitor G2 review thread - replied with frustrations',
     strength: 'hot',
+    signalType: 'competitor_research',
     timeAgo: '18 hours ago',
-    intentScore: 167
+    intentScore: 167,
+    detectedAt: '2026-01-28T21:00:00Z',
+    source: 'g2'
   }
 ]
 
@@ -295,45 +334,61 @@ function MissionControlPage() {
     setProcessingSignal(signalId)
 
     try {
-      // Step 1: Compound Intent Score Manager evaluates
-      const intentResponse = await callAIAgent(
-        `Evaluate compound intent for lead: ${signal.leadName} at ${signal.company}. Signal: ${signal.description}`,
+      // Call MANAGER AGENT that orchestrates all child agents internally
+      // Compound Intent Score Manager coordinates:
+      // 1. LinkedIn Signal Listener Agent (signal validation)
+      // 2. Clay Enrichment & Intent Agent (intent scoring)
+      // 3. Day 0 Strategic Memo Agent (memo generation)
+      // 4. Text-a-Friend Message Writer (message drafting)
+      // 5. Style Vibe Check Agent (message validation)
+      // 6. Global Time-Zone Orchestrator (delivery scheduling)
+
+      const fullSignalContext = {
+        signal_id: signal.id,
+        lead_name: signal.leadName,
+        company: signal.company,
+        title: signal.title,
+        signal_type: signal.signalType,
+        signal_description: signal.description,
+        signal_strength: signal.strength,
+        intent_score: signal.intentScore,
+        detected_at: signal.detectedAt,
+        source: signal.source
+      }
+
+      const result = await callAIAgent(
+        `Process signal-to-action workflow for lead: ${signal.leadName} (${signal.title}) at ${signal.company}.
+
+Signal Details:
+- Type: ${signal.signalType}
+- Strength: ${signal.signalStrength}
+- Description: ${signal.description}
+- Intent Score: ${signal.intentScore}
+- Source: ${signal.source}
+
+MANAGER INSTRUCTIONS:
+You are the Compound Intent Score Manager. Orchestrate the complete Signal-to-Action workflow:
+
+1. Validate signal via LinkedIn Signal Listener (if applicable)
+2. Enrich and score intent via Clay Enrichment Agent
+3. If intent score >= 100 (hot signal), execute the following pipeline:
+   a. Generate Day 0 Strategic Memo analyzing buyer context
+   b. Create Text-a-Friend style message (casual, value-first)
+   c. Run Style Vibe Check to ensure authenticity
+   d. Schedule delivery via Global Time-Zone Orchestrator
+
+4. Return aggregated results with:
+   - Final intent score
+   - Memo summary
+   - Draft message
+   - Style validation status
+   - Scheduled delivery time
+
+Signal Context: ${JSON.stringify(fullSignalContext, null, 2)}`,
         AGENT_IDS.COMPOUND_INTENT_SCORE_MANAGER
       )
 
-      console.log('Intent Score Result:', intentResponse)
-
-      // Step 2: Generate Day 0 Memo (if high score)
-      if (signal.intentScore >= 100) {
-        const memoResponse = await callAIAgent(
-          `Generate Day 0 strategic memo for ${signal.leadName} (${signal.title} at ${signal.company}). Signal: ${signal.description}`,
-          AGENT_IDS.DAY_0_STRATEGIC_MEMO
-        )
-
-        console.log('Day 0 Memo:', memoResponse)
-
-        // Step 3: Generate Text-a-Friend message
-        const messageResponse = await callAIAgent(
-          `Write casual, text-a-friend style LinkedIn DM for ${signal.leadName} about: ${signal.description}`,
-          AGENT_IDS.TEXT_A_FRIEND_MESSAGE_WRITER
-        )
-
-        console.log('Message Draft:', messageResponse)
-
-        // Step 4: Style Vibe Check
-        const styleCheck = await callAIAgent(
-          `Check message vibe and style: "${messageResponse.response?.result?.message || 'Draft message'}"`,
-          AGENT_IDS.STYLE_VIBE_CHECK
-        )
-
-        console.log('Style Check:', styleCheck)
-
-        // Step 5: Schedule via Time-Zone Orchestrator
-        await callAIAgent(
-          `Schedule message delivery for ${signal.leadName} in their timezone (company: ${signal.company})`,
-          AGENT_IDS.GLOBAL_TIME_ZONE_ORCHESTRATOR
-        )
-      }
+      console.log('Signal-to-Action Workflow Result:', result)
 
       // Remove processed signal from list
       setSignals(prev => prev.filter(s => s.id !== signalId))
